@@ -75,6 +75,7 @@
     <script src="{{asset('assets/js/config.js')}}"></script>
 
     <!-- Plugins JS start-->
+    <script src="{{mix('js/app.js')}}" ></script>
     <script src="{{asset('assets/js/sidebar-menu.js')}}"></script>
     <script src="{{asset('assets/js/clock.js')}}"></script>
     <script src="{{asset('assets/js/slick/slick.min.js')}}"></script>
@@ -85,7 +86,7 @@
     <script src="{{asset('assets/js/chart/apex-chart/moment.min.js')}}"></script>
     <script src="{{asset('assets/js/notify/bootstrap-notify.min.js')}}"></script>
     <script src="{{asset('assets/js/dashboard/default.js')}}"></script>
-    <script src="{{asset('assets/js/notify/index.js')}}"></script>
+
     <script src="{{asset('assets/js/typeahead/handlebars.js')}}"></script>
     <script src="{{asset('assets/js/typeahead/typeahead.bundle.js')}}"></script>
     <script src="{{asset('assets/js/typeahead/typeahead.custom.js')}}"></script>
@@ -97,7 +98,7 @@
     <!-- Theme js-->
     <script src="{{asset('assets/js/script.js')}}"></script>
     <script src="{{asset('assets/js/theme-customizer/customizer.js')}}"></script>
-    <script src="{{mix('js/app.js')}}" ></script>
+
 
     <!-- Plugin used-->
     <script>new WOW().init();</script>

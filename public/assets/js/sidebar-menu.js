@@ -439,7 +439,8 @@ function togglePinnedName() {
   if (document.getElementsByClassName("pined").length) {
     if (!pinTitle.classList.contains("show")) pinTitle.classList.add("show");
   } else {
-    pinTitle.classList.remove("show");
+    pinTitle?.classList?.remove("show");
+
   }
 }
 
