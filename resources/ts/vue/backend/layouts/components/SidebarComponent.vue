@@ -39,13 +39,23 @@
                     <li><a href="dashboard-05.html">Social</a></li>
                   </ul>
                 </li>
-                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav" href="task.html">
+                <li  v-for="(item,index) in sidebar_menu" :key="item.id" :class="getClass(item)" >
+                    <span ></span>
+                        <div v-if="item?.heading && isAllowed(item?.heading_can)">
+                        <h6 class="lan-1">
+                            {{item.heading }}
+                        </h6>
+                        </div>
+
+                <i class="fa fa-thumb-tack"></i>
+                <a class="sidebar-link sidebar-title link-nav" href="task.html">
                     <svg class="stroke-icon">
                       <use href="assets/svg/icon-sprite.svg#stroke-task"></use>
                     </svg>
                     <svg class="fill-icon">
                       <use href="assets/svg/icon-sprite.svg#fill-task"> </use>
-                    </svg><span>Tasks</span></a></li>
+                    </svg><span>Tasks</span>
+                    </a></li>
 
               </ul>
             </div>
@@ -57,6 +67,44 @@
 <script>
 export default {
 
+    data() {
+        return {
+            sidebar_menu:{},
+            index: 0,
+            loading: false,
+        }
+    },
+    methods: {
+        logout() {
+            window.location.href = window.location.origin + "/logout";
+        },
+        isAllowed(value) {
+            // if(permissions.includes(value))
+            return true;
+            // else
+            // return true;
+        },
+        getClass(item) {
+            if (item?.heading) {
+                return 'sidebar-main-title'
+            }
+            if (item.type == 'single_link') {
+                return 'sidebar-list'
+            } else {
+                return 'sidebar-list'
+            }
+        },
+        getSideBarMenu() {
+            this.loading = true;
+            axios.get('/config/sidebar-menu').then((res) => {
+                this.sidebar_menu = res.data?.sidebar_menu;
+                this.loading = false;
+            })
+        },
+    },
+    mounted() {
+            this.getSideBarMenu();
+    },
 }
 </script>
 <style lang="">

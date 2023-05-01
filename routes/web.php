@@ -31,3 +31,9 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
+Route::get('/{any}',[BackendController::class,'index']);
+
+
+

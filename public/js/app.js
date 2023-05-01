@@ -20171,7 +20171,48 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      sidebar_menu: {},
+      index: 0,
+      loading: false
+    };
+  },
+  methods: {
+    logout: function logout() {
+      window.location.href = window.location.origin + "/logout";
+    },
+    isAllowed: function isAllowed(value) {
+      // if(permissions.includes(value))
+      return true;
+      // else
+      // return true;
+    },
+    getClass: function getClass(item) {
+      if (item !== null && item !== void 0 && item.heading) {
+        return 'sidebar-main-title';
+      }
+      if (item.type == 'single_link') {
+        return 'sidebar-list';
+      } else {
+        return 'sidebar-list';
+      }
+    },
+    getSideBarMenu: function getSideBarMenu() {
+      var _this = this;
+      this.loading = true;
+      axios.get('/config/sidebar-menu').then(function (res) {
+        var _res$data;
+        _this.sidebar_menu = (_res$data = res.data) === null || _res$data === void 0 ? void 0 : _res$data.sidebar_menu;
+        _this.loading = false;
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getSideBarMenu();
+  }
+});
 
 /***/ }),
 
@@ -20357,10 +20398,46 @@ var _hoisted_1 = {
   "class": "sidebar-wrapper",
   "sidebar-layout": "stroke-svg"
 };
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div><div class=\"logo-wrapper\"><a href=\"index.html\"><img class=\"img-fluid for-light\" src=\"assets/images/logo/logo.png\" alt=\"\"><img class=\"img-fluid for-dark\" src=\"assets/images/logo/logo_dark.png\" alt=\"\"></a><div class=\"back-btn\"><i class=\"fa fa-angle-left\"></i></div><div class=\"toggle-sidebar\"><i class=\"status_toggle middle sidebar-toggle\" data-feather=\"grid\"></i></div></div><div class=\"logo-icon-wrapper\"><a href=\"index.html\"><img class=\"img-fluid\" src=\"assets/images/logo/logo-icon.png\" alt=\"\"></a></div><nav class=\"sidebar-main\"><div class=\"left-arrow\" id=\"left-arrow\"><i data-feather=\"arrow-left\"></i></div><div id=\"sidebar-menu\"><ul class=\"sidebar-links\" id=\"simple-bar\"><li class=\"back-btn\"><a href=\"index.html\"><img class=\"img-fluid\" src=\"assets/images/logo/logo-icon.png\" alt=\"\"></a><div class=\"mobile-back text-end\"><span>Back</span><i class=\"fa fa-angle-right ps-2\" aria-hidden=\"true\"></i></div></li><li class=\"pin-title sidebar-main-title\"><div><h6>Pinned</h6></div></li><li class=\"sidebar-main-title\"><div><h6 class=\"lan-1\">General</h6></div></li><li class=\"sidebar-list\"><i class=\"fa fa-thumb-tack\"></i><label class=\"badge badge-light-primary\">5</label><a class=\"sidebar-link sidebar-title active\" href=\"#\"><svg class=\"stroke-icon\"><use href=\"assets/svg/icon-sprite.svg#stroke-home\"></use></svg><svg class=\"fill-icon\"><use href=\"assets/svg/icon-sprite.svg#fill-home\"></use></svg><span class=\"lan-3\">Dashboard </span></a><ul class=\"sidebar-submenu\"><li><a class=\"lan-4 active\" href=\"index.html\">Default</a></li><li><a class=\"lan-5\" href=\"dashboard-02.html\">Ecommerce</a></li><li><a href=\"dashboard-03.html\">Online course</a></li><li><a href=\"dashboard-04.html\">Crypto</a></li><li><a href=\"dashboard-05.html\">Social</a></li></ul></li><li class=\"sidebar-list\"><i class=\"fa fa-thumb-tack\"></i><a class=\"sidebar-link sidebar-title link-nav\" href=\"task.html\"><svg class=\"stroke-icon\"><use href=\"assets/svg/icon-sprite.svg#stroke-task\"></use></svg><svg class=\"fill-icon\"><use href=\"assets/svg/icon-sprite.svg#fill-task\"></use></svg><span>Tasks</span></a></li></ul></div><div class=\"right-arrow\" id=\"right-arrow\"><i data-feather=\"arrow-right\"></i></div></nav></div>", 1);
-var _hoisted_3 = [_hoisted_2];
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"logo-wrapper\"><a href=\"index.html\"><img class=\"img-fluid for-light\" src=\"assets/images/logo/logo.png\" alt=\"\"><img class=\"img-fluid for-dark\" src=\"assets/images/logo/logo_dark.png\" alt=\"\"></a><div class=\"back-btn\"><i class=\"fa fa-angle-left\"></i></div><div class=\"toggle-sidebar\"><i class=\"status_toggle middle sidebar-toggle\" data-feather=\"grid\"></i></div></div><div class=\"logo-icon-wrapper\"><a href=\"index.html\"><img class=\"img-fluid\" src=\"assets/images/logo/logo-icon.png\" alt=\"\"></a></div>", 2);
+var _hoisted_4 = {
+  "class": "sidebar-main"
+};
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "left-arrow",
+  id: "left-arrow"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "data-feather": "arrow-left"
+})], -1 /* HOISTED */);
+var _hoisted_6 = {
+  id: "sidebar-menu"
+};
+var _hoisted_7 = {
+  "class": "sidebar-links",
+  id: "simple-bar"
+};
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<li class=\"back-btn\"><a href=\"index.html\"><img class=\"img-fluid\" src=\"assets/images/logo/logo-icon.png\" alt=\"\"></a><div class=\"mobile-back text-end\"><span>Back</span><i class=\"fa fa-angle-right ps-2\" aria-hidden=\"true\"></i></div></li><li class=\"pin-title sidebar-main-title\"><div><h6>Pinned</h6></div></li><li class=\"sidebar-main-title\"><div><h6 class=\"lan-1\">General</h6></div></li><li class=\"sidebar-list\"><i class=\"fa fa-thumb-tack\"></i><label class=\"badge badge-light-primary\">5</label><a class=\"sidebar-link sidebar-title active\" href=\"#\"><svg class=\"stroke-icon\"><use href=\"assets/svg/icon-sprite.svg#stroke-home\"></use></svg><svg class=\"fill-icon\"><use href=\"assets/svg/icon-sprite.svg#fill-home\"></use></svg><span class=\"lan-3\">Dashboard </span></a><ul class=\"sidebar-submenu\"><li><a class=\"lan-4 active\" href=\"index.html\">Default</a></li><li><a class=\"lan-5\" href=\"dashboard-02.html\">Ecommerce</a></li><li><a href=\"dashboard-03.html\">Online course</a></li><li><a href=\"dashboard-04.html\">Crypto</a></li><li><a href=\"dashboard-05.html\">Social</a></li></ul></li>", 4);
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, null, -1 /* HOISTED */);
+var _hoisted_13 = {
+  key: 0
+};
+var _hoisted_14 = {
+  "class": "lan-1"
+};
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<i class=\"fa fa-thumb-tack\"></i><a class=\"sidebar-link sidebar-title link-nav\" href=\"task.html\"><svg class=\"stroke-icon\"><use href=\"assets/svg/icon-sprite.svg#stroke-task\"></use></svg><svg class=\"fill-icon\"><use href=\"assets/svg/icon-sprite.svg#fill-task\"></use></svg><span>Tasks</span></a>", 2);
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "right-arrow",
+  id: "right-arrow"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "data-feather": "arrow-right"
+})], -1 /* HOISTED */);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, _hoisted_3);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_7, [_hoisted_8, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.sidebar_menu, function (item, index) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", {
+      key: item.id,
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)($options.getClass(item))
+    }, [_hoisted_12, item !== null && item !== void 0 && item.heading && $options.isAllowed(item === null || item === void 0 ? void 0 : item.heading_can) ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", _hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.heading), 1 /* TEXT */)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _hoisted_15], 2 /* CLASS */);
+  }), 128 /* KEYED_FRAGMENT */))])]), _hoisted_17])])]);
 }
 
 /***/ }),

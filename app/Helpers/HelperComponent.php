@@ -18,7 +18,7 @@ class HelperComponent
 
                 "title" => 'Dashboards',
                 'can' => 'dropdown-dashboards',
-                "icon" => "ri ri-dashboard-2-line",
+                "icon" => "stroke-home",
                 'type' => 'multi',
                 "sub_menu" => [
                     setSubMenu(
@@ -42,7 +42,7 @@ class HelperComponent
 
                 "title" => 'User Management',
                 'can' => 'dropdown-usersmanagement',
-                "icon" => "ri ri-account-circle-line",
+                "icon" => "fill-user",
                 'type' => 'multi',
                 "sub_menu" => [
                     setSubMenu(
