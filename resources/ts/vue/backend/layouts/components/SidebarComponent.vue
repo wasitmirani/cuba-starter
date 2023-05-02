@@ -40,22 +40,35 @@
                   </ul>
                 </li>
                 <li  v-for="(item,index) in sidebar_menu" :key="item.id" :class="getClass(item)" >
-                    <span ></span>
+
                         <div v-if="item?.heading && isAllowed(item?.heading_can)">
-                        <h6 class="lan-1">
+                        <h6 >
                             {{item.heading }}
                         </h6>
                         </div>
+                        <i class="fa fa-thumb-tack" v-if="item.type == 'single_link' && isAllowed(item.can)"></i>
+                        <router-link class="sidebar-link sidebar-title link-nav" v-if="item.type == 'single_link' && isAllowed(item.can)"
+                            :to="item.route">
+                            <i :class="`${item.icon} `"></i>
+                            <span :data-key="`t-${item.title}`">{{ item.title }}
 
-                <i class="fa fa-thumb-tack"></i>
-                <a class="sidebar-link sidebar-title link-nav" href="task.html">
-                    <svg class="stroke-icon">
-                      <use href="assets/svg/icon-sprite.svg#stroke-task"></use>
-                    </svg>
-                    <svg class="fill-icon">
-                      <use href="assets/svg/icon-sprite.svg#fill-task"> </use>
-                    </svg><span>Tasks</span>
-                    </a></li>
+                            </span>
+                            <svg class="stroke-icon">
+                                <use :href="`assets/svg/icon-sprite.svg#${item.icon}`"></use>
+                              </svg>
+                              <svg class="fill-icon">
+                                <use :href="`assets/svg/icon-sprite.svg#${item.icon}`"> </use>
+                              </svg><span>{{ item.title }}</span>
+                        </router-link>
+                        <ul class="sidebar-submenu"  v-if="item?.sub_menu">
+                            <li  v-for="submenu in item.sub_menu" :key="submenu.id">
+
+
+                            <router-link  v-if="isAllowed(submenu?.can)" :to="submenu.route">
+                               {{submenu.title }}</router-link>
+                            </li>
+
+                          </ul></li>
 
               </ul>
             </div>
