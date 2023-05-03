@@ -60,15 +60,27 @@
                                 <use :href="`assets/svg/icon-sprite.svg#${item.icon}`"> </use>
                               </svg><span>{{ item.title }}</span>
                         </router-link>
-                        <ul class="sidebar-submenu"  v-if="item?.sub_menu">
-                            <li  v-for="submenu in item.sub_menu" :key="submenu.id">
+
+                        <i class="fa fa-thumb-tack" v-if="item?.sub_menu">    </i>
+                            <a  v-if="item?.sub_menu" class="sidebar-link sidebar-title" href="#">
+                                <svg class="stroke-icon">
+                                    <use :href="`assets/svg/icon-sprite.svg#${item.icon}`"></use>
+                                  </svg>
+                                  <svg class="fill-icon">
+                                    <use :href="`assets/svg/icon-sprite.svg#${item.icon}`"> </use>
+                                  </svg><span>{{ item.title }}
+                              </span><div class="according-menu"><i class="fa fa-angle-right"></i></div></a>
+                            <ul class="sidebar-submenu"  style="display: none;">
+
+                              <li v-for="submenu in item.sub_menu" :key="submenu.id">
+                              <router-link  v-if="isAllowed(submenu?.can)" :to="submenu.route">
+                                {{submenu.title}}</router-link>
+                                </li>
+                            </ul>
 
 
-                            <router-link  v-if="isAllowed(submenu?.can)" :to="submenu.route">
-                               {{submenu.title }}</router-link>
-                            </li>
+                          </li>
 
-                          </ul></li>
 
               </ul>
             </div>
@@ -78,11 +90,12 @@
       </div>
 </template>
 <script>
+import menu from "./menu";
 export default {
 
     data() {
         return {
-            sidebar_menu:{},
+            sidebar_menu:menu,
             index: 0,
             loading: false,
         }
