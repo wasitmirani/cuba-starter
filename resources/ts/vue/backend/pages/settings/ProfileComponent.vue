@@ -12,6 +12,110 @@
             <loader-box v-if="loading"></loader-box>
           <div v-else class="card-body">
             <div class="row">
+              <div class="col-sm-12">
+                <div class="row">
+                  <div class="col-sm-3 mb-2">
+              
+                          <label class="col-form-label" for="first-name"
+                            >Company Image</label
+                          >
+                     
+                  </div>
+                  <div class="col-sm-9 mb-2">
+                        <upload-media
+                          v-if="updateImage"
+                          class="round"
+                          server="/app-thumbnail-upload"
+                          @media="Media"
+                          ref="upload-media"
+                        >
+                        </upload-media>
+                      <div  v-else class="profile-img app-setting-image">
+                          <img class="round" :src="`${url}/img/app/${this.app_settings?.thumbnail}`" 
+                          height="150" width="150" alt="img-placeholder"/>  
+                          <i @click="updateImage = true"  class="fa fa-close ml-4 cursor-pointer"></i>
+                      </div>
+                  </div>
+                  </div>
+                <form class="form form-horizontal" v-on:submit.prevent="onSubmit">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="mb-2 row">
+                        <div class="col-sm-3">
+                          <label class="col-form-label" for="app-title"
+                            >App Title</label
+                          >
+                        </div>
+                        <div class="col-sm-9">
+                          <input
+                            type="text"
+                            id="app-title"
+                            class="form-control"
+                            name="app_title"
+                            v-model="app_settings.app_title"
+                            placeholder="App Name"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="mb-2 row">
+                        <div class="col-sm-3">
+                          <label class="col-form-label" for="copyright"
+                            >Copyright</label
+                          >
+                        </div>
+                        <div class="col-sm-9">
+                          <input
+                            type="text"
+                            id="copyright"
+                            class="form-control"
+                            name="copyright"
+                            v-model="app_settings.copyright"
+                            placeholder="Copyright"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="mb-2 row">
+                        <div class="col-sm-3">
+                          <label class="col-form-label" for="app-description"
+                            >App Description</label
+                          >
+                        </div>
+                        <div class="col-sm-9">
+                          <textarea
+                            type="text"
+                            id="app-description"
+                            class="form-control"
+                            name="app_description"
+                            v-model="app_settings.app_description"
+                            placeholder="App Description"
+                          ></textarea>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-sm-9 offset-sm-3">
+                      <button
+                        type="submit"
+                        class="
+                          btn btn-primary
+                          me-1
+                            waves-effect waves-float waves-light float-right
+                        "
+                      >
+                        Submit
+                      </button>
+                        
+                    </div>
+                  </div>
+                </form>
+              </div>
+              </div>
+            <!-- <div class="row">
               <div class="col-xl-6 col-lg-6">
                 <div class="row">
                   <div class="col-sm-3 mb-2">
@@ -200,14 +304,6 @@
                           >
                         </div>
                         <div class="col-sm-9">
-                          <!-- <input
-                            type="text"
-                            id="country"
-                            class="form-control"
-                            name="country"
-                            v-model="app_settings.country"
-                            placeholder="Country Name"
-                          /> -->
                            <select class="form-select" id="selectDefault" v-model="app_settings.country">
                                         <option v-for="(country, index) in countries" :key="index" :value="country.country_code">{{country.country_name}}</option>
   
@@ -408,7 +504,7 @@
                   </div>
                 </form>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

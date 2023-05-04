@@ -122,7 +122,7 @@ var _hoisted_6 = {
   "class": "row"
 };
 var _hoisted_7 = {
-  "class": "col-xl-6 col-lg-6"
+  "class": "col-sm-12"
 };
 var _hoisted_8 = {
   "class": "row"
@@ -154,8 +154,8 @@ var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "col-sm-3"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "class": "col-form-label",
-  "for": "first-name"
-}, "Company Name")], -1 /* HOISTED */);
+  "for": "app-title"
+}, "App Title")], -1 /* HOISTED */);
 var _hoisted_17 = {
   "class": "col-sm-9"
 };
@@ -169,8 +169,8 @@ var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "col-sm-3"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "class": "col-form-label",
-  "for": "first-name"
-}, "Tax ID")], -1 /* HOISTED */);
+  "for": "copyright"
+}, "Copyright")], -1 /* HOISTED */);
 var _hoisted_21 = {
   "class": "col-sm-9"
 };
@@ -184,234 +184,12 @@ var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "col-sm-3"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "class": "col-form-label",
-  "for": "first-name"
-}, "VAT No")], -1 /* HOISTED */);
+  "for": "app-description"
+}, "App Description")], -1 /* HOISTED */);
 var _hoisted_25 = {
   "class": "col-sm-9"
 };
-var _hoisted_26 = {
-  "class": "col-12"
-};
-var _hoisted_27 = {
-  "class": "mb-2 row"
-};
-var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "col-sm-3"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "class": "col-form-label",
-  "for": "first-name"
-}, "HBR No")], -1 /* HOISTED */);
-var _hoisted_29 = {
-  "class": "col-sm-9"
-};
-var _hoisted_30 = {
-  "class": "col-12"
-};
-var _hoisted_31 = {
-  "class": "mb-2 row"
-};
-var _hoisted_32 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "col-sm-3"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "class": "col-form-label",
-  "for": "first-name"
-}, "Provisional Client")], -1 /* HOISTED */);
-var _hoisted_33 = {
-  "class": "col-sm-9"
-};
-var _hoisted_34 = {
-  "class": "col-12"
-};
-var _hoisted_35 = {
-  "class": "mb-2 row"
-};
-var _hoisted_36 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "col-sm-3"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "class": "col-form-label",
-  "for": "first-name"
-}, "Provisional Contractor")], -1 /* HOISTED */);
-var _hoisted_37 = {
-  "class": "col-sm-9"
-};
-var _hoisted_38 = {
-  "class": "col-12"
-};
-var _hoisted_39 = {
-  "class": "mb-2 row"
-};
-var _hoisted_40 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "col-sm-3"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "class": "col-form-label",
-  "for": "first-name"
-}, "Handling Fee")], -1 /* HOISTED */);
-var _hoisted_41 = {
-  "class": "col-sm-9"
-};
-var _hoisted_42 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "col-sm-9 offset-sm-3"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  type: "submit",
-  "class": "btn btn-primary me-1 waves-effect waves-float waves-light float-right"
-}, " Submit ")], -1 /* HOISTED */);
-var _hoisted_43 = {
-  "class": "col-xl-6 col-lg-6"
-};
-var _hoisted_44 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Address "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "class": "fa fa-plus-circle"
-})], -1 /* HOISTED */);
-var _hoisted_45 = {
-  "class": "row"
-};
-var _hoisted_46 = {
-  "class": "col-12"
-};
-var _hoisted_47 = {
-  "class": "mb-2 row"
-};
-var _hoisted_48 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "col-sm-3"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "class": "col-form-label",
-  "for": "first-name"
-}, "Country Name")], -1 /* HOISTED */);
-var _hoisted_49 = {
-  "class": "col-sm-9"
-};
-var _hoisted_50 = ["value"];
-var _hoisted_51 = {
-  "class": "col-12"
-};
-var _hoisted_52 = {
-  "class": "mb-2 row"
-};
-var _hoisted_53 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "col-sm-3"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "class": "col-form-label",
-  "for": "first-name"
-}, "Street / House No")], -1 /* HOISTED */);
-var _hoisted_54 = {
-  "class": "col-sm-6"
-};
-var _hoisted_55 = {
-  "class": "col-sm-3"
-};
-var _hoisted_56 = {
-  "class": "col-12"
-};
-var _hoisted_57 = {
-  "class": "mb-2 row"
-};
-var _hoisted_58 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "col-sm-3"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "class": "col-form-label",
-  "for": "first-name"
-}, "Zip code / Town")], -1 /* HOISTED */);
-var _hoisted_59 = {
-  "class": "col-sm-3"
-};
-var _hoisted_60 = {
-  "class": "col-sm-6"
-};
-var _hoisted_61 = {
-  "class": "col-12"
-};
-var _hoisted_62 = {
-  "class": "mb-2 row"
-};
-var _hoisted_63 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "col-sm-3"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "class": "col-form-label",
-  "for": "first-name"
-}, "State")], -1 /* HOISTED */);
-var _hoisted_64 = {
-  "class": "col-sm-9"
-};
-var _hoisted_65 = {
-  "class": "form-check form-check-primary form-switch"
-};
-var _hoisted_66 = ["checked"];
-var _hoisted_67 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "class": "col-form-label",
-  "for": "first-name"
-}, "Use as billing address?", -1 /* HOISTED */);
-var _hoisted_68 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "col-sm-9 offset-sm-3"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  type: "submit",
-  "class": "btn btn-primary me-1 waves-effect waves-float waves-light float-right"
-}, " Submit ")], -1 /* HOISTED */);
-var _hoisted_69 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Contact "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "class": "fa fa-plus-circle"
-})], -1 /* HOISTED */);
-var _hoisted_70 = {
-  "class": "row"
-};
-var _hoisted_71 = {
-  "class": "col-12"
-};
-var _hoisted_72 = {
-  "class": "mb-2 row"
-};
-var _hoisted_73 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "col-sm-3"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "class": "col-form-label",
-  "for": "first-name"
-}, "Billing E-mail")], -1 /* HOISTED */);
-var _hoisted_74 = {
-  "class": "col-sm-9"
-};
-var _hoisted_75 = {
-  "class": "col-12"
-};
-var _hoisted_76 = {
-  "class": "mb-2 row"
-};
-var _hoisted_77 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "col-sm-3"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "class": "col-form-label",
-  "for": "first-name"
-}, "Support Email")], -1 /* HOISTED */);
-var _hoisted_78 = {
-  "class": "col-sm-9"
-};
-var _hoisted_79 = {
-  "class": "col-12"
-};
-var _hoisted_80 = {
-  "class": "mb-2 row"
-};
-var _hoisted_81 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "col-sm-3"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "class": "col-form-label",
-  "for": "first-name"
-}, "Phone")], -1 /* HOISTED */);
-var _hoisted_82 = {
-  "class": "col-sm-9"
-};
-var _hoisted_83 = {
-  "class": "col-12"
-};
-var _hoisted_84 = {
-  "class": "mb-2 row"
-};
-var _hoisted_85 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "col-sm-3"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "class": "col-form-label",
-  "for": "first-name"
-}, "Mobile")], -1 /* HOISTED */);
-var _hoisted_86 = {
-  "class": "col-sm-9"
-};
-var _hoisted_87 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "col-sm-9 offset-sm-3"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "submit",
@@ -446,184 +224,37 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "fa fa-close ml-4 cursor-pointer"
   })]))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     "class": "form form-horizontal",
-    onSubmit: _cache[8] || (_cache[8] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+    onSubmit: _cache[4] || (_cache[4] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $options.onSubmit && $options.onSubmit.apply($options, arguments);
     }, ["prevent"]))
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [_hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
-    id: "company-name",
+    id: "app-title",
     "class": "form-control",
-    name: "company_name",
+    name: "app_title",
     "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
-      return $data.app_settings.company_name = $event;
+      return $data.app_settings.app_title = $event;
     }),
-    placeholder: "Company Name"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.company_name]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [_hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    placeholder: "App Name"
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.app_title]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [_hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
-    id: "tax_id",
+    id: "copyright",
     "class": "form-control",
-    name: "tax_id",
+    name: "copyright",
     "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
-      return $data.app_settings.tax_id = $event;
+      return $data.app_settings.copyright = $event;
     }),
-    placeholder: "Tax Name"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.tax_id]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [_hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    placeholder: "Copyright"
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.copyright]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [_hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
     type: "text",
-    id: "vat_no",
+    id: "app-description",
     "class": "form-control",
-    name: "vat_no",
+    name: "app_description",
     "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
-      return $data.app_settings.vat_no = $event;
+      return $data.app_settings.app_description = $event;
     }),
-    placeholder: "VAT No"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.vat_no]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [_hoisted_28, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_29, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    type: "text",
-    id: "hbr_no",
-    "class": "form-control",
-    name: "hbr_no",
-    "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
-      return $data.app_settings.hbr_no = $event;
-    }),
-    placeholder: "HBR No"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.hbr_no]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_30, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [_hoisted_32, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    type: "number",
-    id: "provisional_client",
-    "class": "form-control",
-    name: "provisional_client",
-    "onUpdate:modelValue": _cache[5] || (_cache[5] = function ($event) {
-      return $data.app_settings.provisional_client = $event;
-    }),
-    placeholder: "Provisional Client"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.provisional_client]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [_hoisted_36, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    type: "number",
-    id: "provisional_contractor",
-    "class": "form-control",
-    name: "provisional_contractor",
-    "onUpdate:modelValue": _cache[6] || (_cache[6] = function ($event) {
-      return $data.app_settings.provisional_contractor = $event;
-    }),
-    placeholder: "Provisional Contractor"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.provisional_contractor]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [_hoisted_40, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_41, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    type: "number",
-    id: "handling_fee",
-    "class": "form-control",
-    name: "handling_fee",
-    "onUpdate:modelValue": _cache[7] || (_cache[7] = function ($event) {
-      return $data.app_settings.handling_fee = $event;
-    }),
-    placeholder: "Handling Fee"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.handling_fee]])])])]), _hoisted_42])], 32 /* HYDRATE_EVENTS */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_43, [_hoisted_44, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
-    "class": "form form-horizontal",
-    onSubmit: _cache[16] || (_cache[16] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
-      return $options.onSubmit && $options.onSubmit.apply($options, arguments);
-    }, ["prevent"]))
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_45, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_46, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_47, [_hoisted_48, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_49, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <input\r\n                            type=\"text\"\r\n                            id=\"country\"\r\n                            class=\"form-control\"\r\n                            name=\"country\"\r\n                            v-model=\"app_settings.country\"\r\n                            placeholder=\"Country Name\"\r\n                          /> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
-    "class": "form-select",
-    id: "selectDefault",
-    "onUpdate:modelValue": _cache[9] || (_cache[9] = function ($event) {
-      return $data.app_settings.country = $event;
-    })
-  }, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.countries, function (country, index) {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
-      key: index,
-      value: country.country_code
-    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(country.country_name), 9 /* TEXT, PROPS */, _hoisted_50);
-  }), 128 /* KEYED_FRAGMENT */))], 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.app_settings.country]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_51, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_52, [_hoisted_53, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_54, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    type: "text",
-    id: "street",
-    "class": "form-control",
-    name: "street",
-    "onUpdate:modelValue": _cache[10] || (_cache[10] = function ($event) {
-      return $data.app_settings.street = $event;
-    }),
-    placeholder: "Street"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.street]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_55, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    type: "text",
-    id: "house_no",
-    "class": "form-control",
-    name: "house_no",
-    "onUpdate:modelValue": _cache[11] || (_cache[11] = function ($event) {
-      return $data.app_settings.house_no = $event;
-    }),
-    placeholder: "House No"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.house_no]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_56, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_57, [_hoisted_58, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_59, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    type: "text",
-    id: "zip_code",
-    "class": "form-control",
-    name: "zip_code",
-    "onUpdate:modelValue": _cache[12] || (_cache[12] = function ($event) {
-      return $data.app_settings.zip_code = $event;
-    }),
-    placeholder: "Zip code"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.zip_code]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_60, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    type: "text",
-    id: "town",
-    "class": "form-control",
-    name: "town",
-    "onUpdate:modelValue": _cache[13] || (_cache[13] = function ($event) {
-      return $data.app_settings.town = $event;
-    }),
-    placeholder: "Town"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.town]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_61, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_62, [_hoisted_63, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_64, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    type: "text",
-    id: "state",
-    "class": "form-control",
-    name: "state",
-    "onUpdate:modelValue": _cache[14] || (_cache[14] = function ($event) {
-      return $data.app_settings.state = $event;
-    }),
-    placeholder: "State"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.state]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_65, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    type: "checkbox",
-    name: "use_as_billing",
-    "onUpdate:modelValue": _cache[15] || (_cache[15] = function ($event) {
-      return $data.app_settings.use_as_billing = $event;
-    }),
-    checked: $data.app_settings.use_as_billing == 1,
-    "class": "form-check-input mt-6",
-    id: "customSwitch3"
-  }, null, 8 /* PROPS */, _hoisted_66), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, $data.app_settings.use_as_billing]]), _hoisted_67])]), _hoisted_68])], 32 /* HYDRATE_EVENTS */), _hoisted_69, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
-    "class": "form form-horizontal",
-    onSubmit: _cache[21] || (_cache[21] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
-      return $options.onSubmit && $options.onSubmit.apply($options, arguments);
-    }, ["prevent"]))
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_70, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_71, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_72, [_hoisted_73, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_74, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    type: "text",
-    id: "billing_email",
-    "class": "form-control",
-    name: "billing_email",
-    "onUpdate:modelValue": _cache[17] || (_cache[17] = function ($event) {
-      return $data.app_settings.billing_email = $event;
-    }),
-    placeholder: "Billing E-mail"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.billing_email]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_75, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_76, [_hoisted_77, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_78, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    type: "text",
-    id: "support_email",
-    "class": "form-control",
-    name: "support_email",
-    "onUpdate:modelValue": _cache[18] || (_cache[18] = function ($event) {
-      return $data.app_settings.support_email = $event;
-    }),
-    placeholder: "Support Email"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.support_email]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_79, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_80, [_hoisted_81, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_82, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    type: "text",
-    id: "phone",
-    "class": "form-control",
-    name: "phone",
-    "onUpdate:modelValue": _cache[19] || (_cache[19] = function ($event) {
-      return $data.app_settings.phone = $event;
-    }),
-    placeholder: "Phone"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.phone]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_83, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_84, [_hoisted_85, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_86, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    type: "text",
-    id: "mobile",
-    "class": "form-control",
-    name: "mobile",
-    "onUpdate:modelValue": _cache[20] || (_cache[20] = function ($event) {
-      return $data.app_settings.mobile = $event;
-    }),
-    placeholder: "Mobile"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.mobile]])])])]), _hoisted_87])], 32 /* HYDRATE_EVENTS */)])])]))])])])]);
+    placeholder: "App Description"
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.app_description]])])])]), _hoisted_26])], 32 /* HYDRATE_EVENTS */)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"row\">\r\n              <div class=\"col-xl-6 col-lg-6\">\r\n                <div class=\"row\">\r\n                  <div class=\"col-sm-3 mb-2\">\r\n              \r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Company Image</label\r\n                          >\r\n                     \r\n                  </div>\r\n                  <div class=\"col-sm-9 mb-2\">\r\n                        <upload-media\r\n                          v-if=\"updateImage\"\r\n                          class=\"round\"\r\n                          server=\"/app-thumbnail-upload\"\r\n                          @media=\"Media\"\r\n                          ref=\"upload-media\"\r\n                        >\r\n                        </upload-media>\r\n                      <div  v-else class=\"profile-img app-setting-image\">\r\n                          <img class=\"round\" :src=\"`${url}/img/app/${this.app_settings?.thumbnail}`\" \r\n                          height=\"150\" width=\"150\" alt=\"img-placeholder\"/>  \r\n                          <i @click=\"updateImage = true\"  class=\"fa fa-close ml-4 cursor-pointer\"></i>\r\n                      </div>\r\n                  </div>\r\n                  </div>\r\n                <form class=\"form form-horizontal\" v-on:submit.prevent=\"onSubmit\">\r\n                  <div class=\"row\">\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Company Name</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"company-name\"\r\n                            class=\"form-control\"\r\n                            name=\"company_name\"\r\n                            v-model=\"app_settings.company_name\"\r\n                            placeholder=\"Company Name\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Tax ID</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"tax_id\"\r\n                            class=\"form-control\"\r\n                            name=\"tax_id\"\r\n                            v-model=\"app_settings.tax_id\"\r\n                            placeholder=\"Tax Name\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >VAT No</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"vat_no\"\r\n                            class=\"form-control\"\r\n                            name=\"vat_no\"\r\n                            v-model=\"app_settings.vat_no\"\r\n                            placeholder=\"VAT No\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >HBR No</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"hbr_no\"\r\n                            class=\"form-control\"\r\n                            name=\"hbr_no\"\r\n                            v-model=\"app_settings.hbr_no\"\r\n                            placeholder=\"HBR No\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Provisional Client</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"number\"\r\n                            id=\"provisional_client\"\r\n                            class=\"form-control\"\r\n                            name=\"provisional_client\"\r\n                            v-model=\"app_settings.provisional_client\"\r\n                            placeholder=\"Provisional Client\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Provisional Contractor</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"number\"\r\n                            id=\"provisional_contractor\"\r\n                            class=\"form-control\"\r\n                            name=\"provisional_contractor\"\r\n                            v-model=\"app_settings.provisional_contractor\"\r\n                            placeholder=\"Provisional Contractor\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                     <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Handling Fee</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"number\"\r\n                            id=\"handling_fee\"\r\n                            class=\"form-control\"\r\n                            name=\"handling_fee\"\r\n                            v-model=\"app_settings.handling_fee\"\r\n                            placeholder=\"Handling Fee\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-sm-9 offset-sm-3\">\r\n                      <button\r\n                        type=\"submit\"\r\n                        class=\"\r\n                          btn btn-primary\r\n                          me-1\r\n                            waves-effect waves-float waves-light float-right\r\n                        \"\r\n                      >\r\n                        Submit\r\n                      </button>\r\n                        \r\n                    </div>\r\n                  </div>\r\n                </form>\r\n              </div>\r\n              <div class=\"col-xl-6 col-lg-6\">\r\n                <h2>Address <i class=\"fa fa-plus-circle\"></i></h2>\r\n                 <form class=\"form form-horizontal\" v-on:submit.prevent=\"onSubmit\">\r\n                  <div class=\"row\">\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Country Name</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                           <select class=\"form-select\" id=\"selectDefault\" v-model=\"app_settings.country\">\r\n                                        <option v-for=\"(country, index) in countries\" :key=\"index\" :value=\"country.country_code\">{{country.country_name}}</option>\r\n  \r\n                                    </select>\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Street / House No</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-6\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"street\"\r\n                            class=\"form-control\"\r\n                            name=\"street\"\r\n                            v-model=\"app_settings.street\"\r\n                            placeholder=\"Street\"\r\n                          />\r\n                        </div>\r\n                         <div class=\"col-sm-3\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"house_no\"\r\n                            class=\"form-control\"\r\n                            name=\"house_no\"\r\n                            v-model=\"app_settings.house_no\"\r\n                            placeholder=\"House No\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Zip code / Town</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-3\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"zip_code\"\r\n                            class=\"form-control\"\r\n                            name=\"zip_code\"\r\n                            v-model=\"app_settings.zip_code\"\r\n                            placeholder=\"Zip code\"\r\n                          />\r\n                        </div>\r\n                          <div class=\"col-sm-6\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"town\"\r\n                            class=\"form-control\"\r\n                            name=\"town\"\r\n                            v-model=\"app_settings.town\"\r\n                            placeholder=\"Town\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >State</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"state\"\r\n                            class=\"form-control\"\r\n                            name=\"state\"\r\n                            v-model=\"app_settings.state\"\r\n                            placeholder=\"State\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                      <div class=\"form-check form-check-primary form-switch\">\r\n                        <input type=\"checkbox\" name=\"use_as_billing\" v-model=\"app_settings.use_as_billing\"  :checked=\"app_settings.use_as_billing == 1\" class=\"form-check-input mt-6\" id=\"customSwitch3\">\r\n                        <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Use as billing address?</label>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"col-sm-9 offset-sm-3\">\r\n                      <button\r\n                        type=\"submit\"\r\n                        class=\"\r\n                          btn btn-primary\r\n                          me-1\r\n                            waves-effect waves-float waves-light float-right\r\n                        \"\r\n                      >\r\n                        Submit\r\n                      </button>\r\n                        \r\n                    </div>\r\n                  </div>\r\n                </form>\r\n  \r\n                 <h2>Contact <i class=\"fa fa-plus-circle\"></i></h2>\r\n                 <form class=\"form form-horizontal\" v-on:submit.prevent=\"onSubmit\">\r\n                  <div class=\"row\">\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Billing E-mail</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"billing_email\"\r\n                            class=\"form-control\"\r\n                            name=\"billing_email\"\r\n                            v-model=\"app_settings.billing_email\"\r\n                            placeholder=\"Billing E-mail\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Support Email</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"support_email\"\r\n                            class=\"form-control\"\r\n                            name=\"support_email\"\r\n                            v-model=\"app_settings.support_email\"\r\n                            placeholder=\"Support Email\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Phone</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"phone\"\r\n                            class=\"form-control\"\r\n                            name=\"phone\"\r\n                            v-model=\"app_settings.phone\"\r\n                            placeholder=\"Phone\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Mobile</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"mobile\"\r\n                            class=\"form-control\"\r\n                            name=\"mobile\"\r\n                            v-model=\"app_settings.mobile\"\r\n                            placeholder=\"Mobile\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-sm-9 offset-sm-3\">\r\n                      <button\r\n                        type=\"submit\"\r\n                        class=\"\r\n                          btn btn-primary\r\n                          me-1\r\n                            waves-effect waves-float waves-light float-right\r\n                        \"\r\n                      >\r\n                        Submit\r\n                      </button>\r\n                        \r\n                    </div>\r\n                  </div>\r\n                </form>\r\n              </div>\r\n            </div> ")]))])])])]);
 }
 
 /***/ }),
