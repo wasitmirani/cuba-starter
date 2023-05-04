@@ -101,6 +101,7 @@ class HelperComponent
             setSingleLink('Pricing Plans','tag','pricing-plans','pricing-plans'),
             setSingleLink('Testimonials','customers','pricing-plans','pricing-plans'),
             setSingleLink('Payment Settings','doller-return','pricing-plans','pricing-plans'),
+            setSingleLink('Account','stroke-widget','account-settings','account-settings'),
             setSingleLink('App Settings','stroke-widget','app-settings','app-settings'),
 
             [
