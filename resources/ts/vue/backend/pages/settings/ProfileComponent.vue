@@ -1,24 +1,7 @@
 <template>
     <div>
-      <!-- <breadcrumb active_name="App Settings"></breadcrumb> -->
-      <div class="container-fluid">
-            <div class="page-title">
-              <div class="row">
-                <div class="col-6">
-                  <h4>App Settings</h4>
-                </div>
-                <div class="col-6">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item">                                      
-                     
-                    </li>
-                    <li class="breadcrumb-item">Bonus Ui</li>
-                    <li class="breadcrumb-item active">Basic Card</li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </div>
+      <breadcrumb active_name="App Settings"></breadcrumb>
+      
       <div class="container-fluid">
       <div class="row">
         <div class="card">
@@ -436,8 +419,10 @@
   <script>
     // import breadcrumb from "../../components/breadcrumbComponent.vue";
   import UploadMedia from "vue-media-upload";
+  import Breadcrumb from '../components/BreadcrumbComponent.vue';
+
   export default {
-    components: { UploadMedia},
+    components: { UploadMedia, Breadcrumb},
     data() {
       return {
         app_settings: {},
