@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\backend\api\DashboardController;
 use App\Http\Controllers\backend\api\layout\LayoutController;
 use App\Http\Controllers\backend\api\layout\SettingsController;
 
@@ -27,4 +28,9 @@ Route::prefix('config')->group(function () {
     Route::get('settings',[SettingsController::class,'getSettings']);
 });
 
+   //APP SETTINGS ROUTES
+   Route::get('/app-settings',[DashboardController::class,'getAppSettings']);
+   Route::post('/app-settings',[DashboardController::class,'UpdateAppSettings']);
+   Route::post('app-thumbnail-upload',[DashboardController::class,'uploadAppThumbnail']);
+   
 Route::resource('user', UserController::class);

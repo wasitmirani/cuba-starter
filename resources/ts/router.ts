@@ -24,6 +24,10 @@ const routes = [
         path: `/dashboard`, component:()=>getComponent("dashboard/MasterDashboard"), name: "master_dashboard",
         meta: { permissions: "dashboard-view" }
     },
+    {
+        path: `/profile-settings`, component:()=>getComponent("settings/Profile"), name: "profile_settings",
+        meta: { permissions: "profile-settings-view" }
+    },
 
 
 
