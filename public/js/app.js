@@ -20009,6 +20009,15 @@ var routes = [{
   meta: {
     permissions: "profile-settings-view"
   }
+}, {
+  path: "/account-settings",
+  component: function component() {
+    return getComponent("settings/Account");
+  },
+  name: "account_settings",
+  meta: {
+    permissions: "account-settings-view"
+  }
 }];
 var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createRouter)({
   history: (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createWebHistory)(),
@@ -39260,6 +39269,10 @@ var map = {
 		"./resources/ts/vue/backend/pages/error/404Component.vue",
 		"resources_ts_vue_backend_pages_error_404Component_vue"
 	],
+	"./settings/AccountComponent.vue": [
+		"./resources/ts/vue/backend/pages/settings/AccountComponent.vue",
+		"resources_ts_vue_backend_pages_settings_AccountComponent_vue"
+	],
 	"./settings/ProfileComponent.vue": [
 		"./resources/ts/vue/backend/pages/settings/ProfileComponent.vue",
 		"resources_ts_vue_backend_pages_settings_ProfileComponent_vue"
@@ -43012,7 +43025,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_ts_vue_backend_pages_HomeComponent_vue":1,"resources_ts_vue_backend_pages_dashboard_MasterDashboardComponent_vue":1,"resources_ts_vue_backend_pages_error_404Component_vue":1,"resources_ts_vue_backend_pages_settings_ProfileComponent_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_ts_vue_backend_pages_HomeComponent_vue":1,"resources_ts_vue_backend_pages_dashboard_MasterDashboardComponent_vue":1,"resources_ts_vue_backend_pages_error_404Component_vue":1,"resources_ts_vue_backend_pages_settings_AccountComponent_vue":1,"resources_ts_vue_backend_pages_settings_ProfileComponent_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

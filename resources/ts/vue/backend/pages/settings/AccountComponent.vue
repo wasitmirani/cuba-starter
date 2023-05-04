@@ -18,7 +18,7 @@
                   role="tab"
                   aria-controls="bottom-home"
                   aria-selected="true"
-                  ><i class="icofont icofont-ui-home"> </i>Basic Settings</a
+                  ><i class="icofont icofont-ui-user"> </i>User Settings</a
                 >
               </li>
               <li class="nav-item">
@@ -30,7 +30,7 @@
                   role="tab"
                   aria-controls="bottom-inbox"
                   aria-selected="false"
-                  ><i class="icofont icofont-ui-message"></i>Google Settings</a
+                  ><i class="icofont icofont-ui-message"></i>Email Settings</a
                 >
               </li>
               <li class="nav-item">
@@ -42,7 +42,7 @@
                   role="tab"
                   aria-controls="bottom-contact"
                   aria-selected="false"
-                  ><i class="icofont icofont-email"></i>SMTP Settings</a
+                  ><i class="icofont icofont-ui-password"></i>Password Settings</a
                 >
               </li>
             </ul>
@@ -60,8 +60,8 @@
             >
               <div class="card">
                 <div class="card-header">
-                  <h4>Settings</h4>
-                  <p>This tab contains the basic settings of the App</p>
+                  <h4>User Settings</h4>
+                  <p>For basic settings of user</p>
                 </div>
                 <!-- <loader-box v-if="loading"></loader-box> -->
                 <div class="card-body">
@@ -70,7 +70,7 @@
                       <div class="row">
                         <div class="col-sm-3 mb-2">
                           <label class="col-form-label" for="first-name"
-                            >Company Image</label
+                            >Profile Image</label
                           >
                         </div>
                         <div class="col-sm-9 mb-2">
@@ -85,7 +85,7 @@
                           <div v-else class="profile-img app-setting-image">
                             <img
                               class="round"
-                              :src="`${url}/img/app/${this.app_settings?.thumbnail}`"
+                              :src="`${url}/img/app/${this.user?.thumbnail}`"
                               height="150"
                               width="150"
                               alt="img-placeholder"
@@ -105,18 +105,18 @@
                           <div class="col-12">
                             <div class="mb-2 row">
                               <div class="col-sm-3">
-                                <label class="col-form-label" for="app-title"
-                                  >App Title</label
+                                <label class="col-form-label" for="name"
+                                  >Name</label
                                 >
                               </div>
                               <div class="col-sm-9">
                                 <input
                                   type="text"
-                                  id="app-title"
+                                  id="name"
                                   class="form-control"
-                                  name="app_title"
-                                  v-model="app_settings.app_title"
-                                  placeholder="App Name"
+                                  name="name"
+                                  v-model="user.name"
+                                  placeholder="Name"
                                 />
                               </div>
                             </div>
@@ -124,51 +124,21 @@
                           <div class="col-12">
                             <div class="mb-2 row">
                               <div class="col-sm-3">
-                                <label class="col-form-label" for="copyright"
-                                  >Copyright</label
+                                <label class="col-form-label" for="phone"
+                                  >Phone</label
                                 >
                               </div>
                               <div class="col-sm-9">
                                 <input
                                   type="text"
-                                  id="copyright"
+                                  id="phone"
                                   class="form-control"
-                                  name="copyright"
-                                  v-model="app_settings.copyright"
-                                  placeholder="Copyright"
+                                  name="phone"
+                                  v-model="user.phone"
+                                  placeholder="phone"
                                 />
                               </div>
                             </div>
-                          </div>
-                          <div class="col-12">
-                            <div class="mb-2 row">
-                              <div class="col-sm-3">
-                                <label
-                                  class="col-form-label"
-                                  for="app-description"
-                                  >App Description</label
-                                >
-                              </div>
-                              <div class="col-sm-9">
-                                <textarea
-                                  type="text"
-                                  id="app-description"
-                                  class="form-control"
-                                  name="app_description"
-                                  v-model="app_settings.app_description"
-                                  placeholder="App Description"
-                                ></textarea>
-                              </div>
-                            </div>
-                          </div>
-  
-                          <div class="col-sm-9 offset-sm-3">
-                            <button
-                              type="submit"
-                              class="btn btn-primary me-1 waves-effect waves-float waves-light float-right"
-                            >
-                              Submit
-                            </button>
                           </div>
                         </div>
                       </form>
@@ -187,42 +157,28 @@
                 <div class="card">
                   <div class="card-header d-flex justify-content-between">
                     <div>
-                      <h4>Goole Login Setup</h4>
-                      <p>For user login or registraion</p>
+                      <h4>Email Settings</h4>
+                      <p>For user email settings</p>
                     </div>
   
-                    <div class="media mb-2">
-                      <label class="col-form-label m-r-10"
-                        >Allow Goole Login</label
-                      >
-                      <div class="media-body text-end">
-                        <label class="switch">
-                          <input
-                            type="checkbox"
-                            v-model="app_settings.allow_google_login"
-                            checked=""
-                          /><span class="switch-state"></span>
-                        </label>
-                      </div>
-                    </div>
                   </div>
                   <div class="card-body">
                     <div class="row">
                       <div class="col-6">
                         <div class="mb-2 row">
                           <div class="col-sm-4">
-                            <label class="col-form-label" for="google-client-id"
-                              >Google Client ID</label
+                            <label class="col-form-label" for="email"
+                              >Email</label
                             >
                           </div>
                           <div class="col-sm-8">
                             <input
-                              type="password"
+                              type="email"
                               id="google-client-id"
                               class="form-control"
-                              name="google_client_id"
-                              v-model="app_settings.google_client_id"
-                              placeholder="Google Client ID"
+                              name="email"
+                              v-model="user.email"
+                              placeholder="Email"
                             />
                           </div>
                         </div>
@@ -230,41 +186,18 @@
                       <div class="col-6">
                         <div class="mb-2 row">
                           <div class="col-sm-4">
-                            <label
-                              class="col-form-label"
-                              for="google-client-secret"
-                              >Google Client Secret</label
+                            <label class="col-form-label" for="new-email"
+                              >New Email</label
                             >
                           </div>
                           <div class="col-sm-8">
                             <input
-                              type="password"
-                              id="google-client-secret"
+                              type="email"
+                              id="new-email"
                               class="form-control"
-                              name="google_client_secret"
-                              v-model="app_settings.google_client_secret"
-                              placeholder="Google Client Secret"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="mb-2 row">
-                          <div class="col-sm-4">
-                            <label
-                              class="col-form-label"
-                              for="google-redirect-url"
-                              >Google Redirect URL</label
-                            >
-                          </div>
-                          <div class="col-sm-8">
-                            <input
-                              type="text"
-                              id="google-redirect-url"
-                              class="form-control"
-                              name="google_redirect_url"
-                              v-model="app_settings.google_redirect_url"
-                              placeholder="Google Redirect URL"
+                              name="new-email"
+                              v-model="user.new_email"
+                              placeholder="New Email"
                             />
                           </div>
                         </div>
@@ -292,84 +225,28 @@
                 <div class="card">
                   <div class="card-header d-flex justify-content-between">
                     <div>
-                      <h4>SMTP Setup</h4>
-                      <p>For email send to user</p>
+                      <h4>Password Settings</h4>
+                      <p>For user password settings</p>
                     </div>
+  
                   </div>
                   <div class="card-body">
                     <div class="row">
                       <div class="col-6">
                         <div class="mb-2 row">
                           <div class="col-sm-4">
-                            <label class="col-form-label" for="smtp-host"
-                              >SMTP Host</label
-                            >
-                          </div>
-                          <div class="col-sm-8">
-                            <input
-                              type="text"
-                              id="smtp-host"
-                              class="form-control"
-                              name="smtp_host"
-                              v-model="app_settings.smtp_host"
-                              placeholder="SMTP Host"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="mb-2 row">
-                          <div class="col-sm-4">
-                            <label class="col-form-label" for="smtp-port"
-                              >SMTP Port</label
-                            >
-                          </div>
-                          <div class="col-sm-8">
-                            <input
-                              type="text"
-                              id="smtp-host"
-                              class="form-control"
-                              name="smtp_port"
-                              v-model="app_settings.smtp_port"
-                              placeholder="SMTP Port"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="mb-2 row">
-                          <div class="col-sm-4">
-                            <label class="col-form-label" for="smtp-username"
-                              >SMTP Username</label
-                            >
-                          </div>
-                          <div class="col-sm-8">
-                            <input
-                              type="text"
-                              id="smtp-username"
-                              class="form-control"
-                              name="smtp_username"
-                              v-model="app_settings.smtp_username"
-                              placeholder="SMTP Port"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="mb-2 row">
-                          <div class="col-sm-4">
-                            <label class="col-form-label" for="smtp-password"
-                              >SMTP Password</label
+                            <label class="col-form-label" for="current-password"
+                              >Current Password</label
                             >
                           </div>
                           <div class="col-sm-8">
                             <input
                               type="password"
-                              id="smtp-password"
+                              id="current-password"
                               class="form-control"
-                              name="password"
-                              v-model="app_settings.smtp_password"
-                              placeholder="SMTP Password"
+                              name="current_password"
+                              v-model="user.current_password"
+                              placeholder="Current Password"
                             />
                           </div>
                         </div>
@@ -377,18 +254,18 @@
                       <div class="col-6">
                         <div class="mb-2 row">
                           <div class="col-sm-4">
-                            <label class="col-form-label" for="smtp-email"
-                              >SMTP Email</label
+                            <label class="col-form-label" for="new-password"
+                              >New Password</label
                             >
                           </div>
                           <div class="col-sm-8">
                             <input
-                              type="email"
-                              id="smtp-email"
+                              type="password"
+                              id="new-password"
                               class="form-control"
-                              name="email"
-                              v-model="app_settings.email"
-                              placeholder="SMTP Email"
+                              name="new_password"
+                              v-model="user.new_password"
+                              placeholder="New Password"
                             />
                           </div>
                         </div>
@@ -396,56 +273,18 @@
                       <div class="col-6">
                         <div class="mb-2 row">
                           <div class="col-sm-4">
-                            <label class="col-form-label" for="smtp-sender"
-                              >SMTP Sender</label
+                            <label class="col-form-label" for="confirm-new-password"
+                              >Confirm New Password</label
                             >
                           </div>
                           <div class="col-sm-8">
                             <input
-                              type="text"
-                              id="smtp-sender"
+                              type="password"
+                              id="confirm-password"
                               class="form-control"
-                              name="sender"
-                              v-model="app_settings.sender"
-                              placeholder="SMTP Sender"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="mb-2 row">
-                          <div class="col-sm-4">
-                            <label class="col-form-label" for="smtp-encryption"
-                              >SMTP Encryption</label
-                            >
-                          </div>
-                          <div class="col-sm-8">
-                            <input
-                              type="text"
-                              id="smtp-encryption"
-                              class="form-control"
-                              name="encryption"
-                              v-model="app_settings.encryption"
-                              placeholder="SMTP Encryption"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="mb-2 row">
-                          <div class="col-sm-4">
-                            <label class="col-form-label" for="smtp-port"
-                              >SMTP Port</label
-                            >
-                          </div>
-                          <div class="col-sm-8">
-                            <input
-                              type="text"
-                              id="smtp-host"
-                              class="form-control"
-                              name="smtp_port"
-                              v-model="app_settings.smtp_port"
-                              placeholder="SMTP Port"
+                              name="confirm_new_password"
+                              v-model="user.confirm_new_password"
+                              placeholder="Confirm New Password"
                             />
                           </div>
                         </div>
@@ -480,7 +319,7 @@
     components: { UploadMedia, Breadcrumb },
     data() {
       return {
-        app_settings: {},
+        user: {},
         media: [],
         url: window.location.origin,
         api_url: "/app-thumbnail-upload",
@@ -502,13 +341,13 @@
         if (this.media) {
           console.log(this?.$refs["upload-media"].media);
           // console.log(this.$refs?.upload-media?.media);
-          this.app_settings.thumbnail = this.media[0]?.name;
+          this.user.thumbnail = this.media[0]?.name;
         }
       },
       async onSubmit() {
         this.loading = true;
         await axios
-          .post("app-settings", this.app_settings)
+          .post("user-settings", this.user)
           .then((res) => {
             this.getAppSettings();
             this.loading = false;
@@ -526,9 +365,8 @@
   
       getAppSettings() {
         this.loading = true;
-        axios.get("app-settings").then((res) => {
-          this.app_settings = res.data.app_settings;
-          this.countries = res.data.countries;
+        axios.get("user-settings").then((res) => {
+          this.user = res.data.user;
           this.loading = false;
         });
       },

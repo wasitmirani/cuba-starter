@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\backend\api;
 
+use App\Models\User;
 use App\Models\Country;
 use App\Models\AppSetting;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
@@ -26,6 +28,20 @@ class DashboardController extends Controller
       public function UpdateAppSettings(Request $request)
       { 
         return AppSetting::where('id', 1)->update([ 'app_data' => json_encode($request->all())]);
+     
+      }
+      public function getUserSettings(Request $request)
+      {
+        $user = User::where('id', Auth::user()->id)->first();
+        
+        return response()->json(['user' => $user], 200);
+      }
+      public function UpdateUserSettings(Request $request, User $user)
+      { 
+        $input = $request->all();
+        $user->fill($input)->save();
+
+        return response()->json(['message', 'Record Successfully Updated!'], 200);
      
       }
 }

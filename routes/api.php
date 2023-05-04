@@ -31,6 +31,8 @@ Route::prefix('config')->group(function () {
    //APP SETTINGS ROUTES
    Route::get('/app-settings',[DashboardController::class,'getAppSettings']);
    Route::post('/app-settings',[DashboardController::class,'UpdateAppSettings']);
+   Route::get('/user-settings',[DashboardController::class,'getUserSettings']);
+   Route::post('/user-settings',[DashboardController::class,'UpdateUserSettings']);
    Route::post('app-thumbnail-upload',[DashboardController::class,'uploadAppThumbnail']);
    
 Route::resource('user', UserController::class);
