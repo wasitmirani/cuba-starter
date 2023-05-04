@@ -30,7 +30,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       app_settings: {},
       media: [],
       url: window.location.origin,
-      api_url: '/app-thumbnail-upload',
+      api_url: "/app-thumbnail-upload",
       updateImage: false,
       loading: false,
       countries: []
@@ -40,13 +40,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     Media: function Media(value) {
       if (this.media.length > 1) {
         this.media.splice(0, 1);
-        if (this.$refs['upload-media'] != undefined) this.$refs['upload-media'].reset();
+        if (this.$refs["upload-media"] != undefined) this.$refs["upload-media"].reset();
       }
       this.media = [];
       this.media = value;
       if (this.media) {
         var _this$media$;
-        console.log(this === null || this === void 0 ? void 0 : this.$refs['upload-media'].media);
+        console.log(this === null || this === void 0 ? void 0 : this.$refs["upload-media"].media);
         // console.log(this.$refs?.upload-media?.media);
         this.app_settings.thumbnail = (_this$media$ = this.media[0]) === null || _this$media$ === void 0 ? void 0 : _this$media$.name;
       }
@@ -59,12 +59,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             case 0:
               _this.loading = true;
               _context.next = 3;
-              return axios.post('app-settings', _this.app_settings).then(function (res) {
+              return axios.post("app-settings", _this.app_settings).then(function (res) {
                 _this.getAppSettings();
                 _this.loading = false;
                 _this.updateImage = false;
               })["catch"](function (err) {
-                _this.$root.alertNotify(err.response.status, null, 'error', err.response.data);
+                _this.$root.alertNotify(err.response.status, null, "error", err.response.data);
               });
             case 3:
             case "end":
@@ -76,7 +76,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     getAppSettings: function getAppSettings() {
       var _this2 = this;
       this.loading = true;
-      axios.get('app-settings').then(function (res) {
+      axios.get("app-settings").then(function (res) {
         _this2.app_settings = res.data.app_settings;
         _this2.countries = res.data.countries;
         _this2.loading = false;
@@ -102,122 +102,410 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
-var _hoisted_1 = {
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "container-fluid"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "card"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "card-body"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", {
+  "class": "nav nav-tabs border-tab mb-0",
+  id: "bottom-tab",
+  role: "tablist"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+  "class": "nav-item"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "nav-link nav-border txt-primary tab-primary pt-0 active",
+  id: "bottom-home-tab",
+  "data-bs-toggle": "tab",
+  href: "#bottom-home",
+  role: "tab",
+  "aria-controls": "bottom-home",
+  "aria-selected": "true"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "icofont icofont-ui-home"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Basic Settings")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+  "class": "nav-item"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "nav-link nav-border txt-primary tab-primary",
+  id: "bottom-inbox-tab",
+  "data-bs-toggle": "tab",
+  href: "#bottom-inbox",
+  role: "tab",
+  "aria-controls": "bottom-inbox",
+  "aria-selected": "false"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "icofont icofont-ui-message"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Google Settings")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+  "class": "nav-item"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "nav-link nav-border txt-primary tab-primary",
+  id: "bottom-contact-tab",
+  "data-bs-toggle": "tab",
+  href: "#bottom-contact",
+  role: "tab",
+  "aria-controls": "bottom-contact",
+  "aria-selected": "false"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "icofont icofont-email"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("SMTP Settings")])])])])])], -1 /* HOISTED */);
+var _hoisted_2 = {
   "class": "container-fluid"
 };
-var _hoisted_2 = {
+var _hoisted_3 = {
   "class": "row"
 };
-var _hoisted_3 = {
-  "class": "card"
+var _hoisted_4 = {
+  "class": "tab-content",
+  id: "bottom-tabContent"
 };
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "card-header"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", null, "Settings"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "This tab contains the basic settings of the App")], -1 /* HOISTED */);
 var _hoisted_5 = {
-  key: 1,
-  "class": "card-body"
+  "class": "tab-pane fade active show",
+  id: "bottom-home",
+  role: "tabpanel",
+  "aria-labelledby": "bottom-home-tab"
 };
 var _hoisted_6 = {
+  "class": "card"
+};
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "card-header"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", null, "Settings"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "This tab contains the basic settings of the App")], -1 /* HOISTED */);
+var _hoisted_8 = {
+  "class": "card-body"
+};
+var _hoisted_9 = {
   "class": "row"
 };
-var _hoisted_7 = {
+var _hoisted_10 = {
   "class": "col-sm-12"
 };
-var _hoisted_8 = {
+var _hoisted_11 = {
   "class": "row"
 };
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "col-sm-3 mb-2"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "class": "col-form-label",
   "for": "first-name"
 }, "Company Image")], -1 /* HOISTED */);
-var _hoisted_10 = {
+var _hoisted_13 = {
   "class": "col-sm-9 mb-2"
 };
-var _hoisted_11 = {
+var _hoisted_14 = {
   key: 1,
   "class": "profile-img app-setting-image"
 };
-var _hoisted_12 = ["src"];
-var _hoisted_13 = {
+var _hoisted_15 = ["src"];
+var _hoisted_16 = {
   "class": "row"
 };
-var _hoisted_14 = {
+var _hoisted_17 = {
   "class": "col-12"
 };
-var _hoisted_15 = {
+var _hoisted_18 = {
   "class": "mb-2 row"
 };
-var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "col-sm-3"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "class": "col-form-label",
   "for": "app-title"
 }, "App Title")], -1 /* HOISTED */);
-var _hoisted_17 = {
+var _hoisted_20 = {
   "class": "col-sm-9"
 };
-var _hoisted_18 = {
+var _hoisted_21 = {
   "class": "col-12"
 };
-var _hoisted_19 = {
+var _hoisted_22 = {
   "class": "mb-2 row"
 };
-var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "col-sm-3"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "class": "col-form-label",
   "for": "copyright"
 }, "Copyright")], -1 /* HOISTED */);
-var _hoisted_21 = {
+var _hoisted_24 = {
   "class": "col-sm-9"
 };
-var _hoisted_22 = {
+var _hoisted_25 = {
   "class": "col-12"
 };
-var _hoisted_23 = {
+var _hoisted_26 = {
   "class": "mb-2 row"
 };
-var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "col-sm-3"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "class": "col-form-label",
   "for": "app-description"
 }, "App Description")], -1 /* HOISTED */);
-var _hoisted_25 = {
+var _hoisted_28 = {
   "class": "col-sm-9"
 };
-var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "col-sm-9 offset-sm-3"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "submit",
   "class": "btn btn-primary me-1 waves-effect waves-float waves-light float-right"
 }, " Submit ")], -1 /* HOISTED */);
+var _hoisted_30 = {
+  "class": "tab-pane fade",
+  id: "bottom-inbox",
+  role: "tabpanel",
+  "aria-labelledby": "bottom-inbox-tab"
+};
+var _hoisted_31 = {
+  "class": "card"
+};
+var _hoisted_32 = {
+  "class": "card-header d-flex justify-content-between"
+};
+var _hoisted_33 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", null, "Goole Login Setup"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "For user login or registraion")], -1 /* HOISTED */);
+var _hoisted_34 = {
+  "class": "media mb-2"
+};
+var _hoisted_35 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "class": "col-form-label m-r-10"
+}, "Allow Goole Login", -1 /* HOISTED */);
+var _hoisted_36 = {
+  "class": "media-body text-end"
+};
+var _hoisted_37 = {
+  "class": "switch"
+};
+var _hoisted_38 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "switch-state"
+}, null, -1 /* HOISTED */);
+var _hoisted_39 = {
+  "class": "card-body"
+};
+var _hoisted_40 = {
+  "class": "row"
+};
+var _hoisted_41 = {
+  "class": "col-6"
+};
+var _hoisted_42 = {
+  "class": "mb-2 row"
+};
+var _hoisted_43 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-sm-4"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "class": "col-form-label",
+  "for": "google-client-id"
+}, "Google Client ID")], -1 /* HOISTED */);
+var _hoisted_44 = {
+  "class": "col-sm-8"
+};
+var _hoisted_45 = {
+  "class": "col-6"
+};
+var _hoisted_46 = {
+  "class": "mb-2 row"
+};
+var _hoisted_47 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-sm-4"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "class": "col-form-label",
+  "for": "google-client-secret"
+}, "Google Client Secret")], -1 /* HOISTED */);
+var _hoisted_48 = {
+  "class": "col-sm-8"
+};
+var _hoisted_49 = {
+  "class": "col-6"
+};
+var _hoisted_50 = {
+  "class": "mb-2 row"
+};
+var _hoisted_51 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-sm-4"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "class": "col-form-label",
+  "for": "google-redirect-url"
+}, "Google Redirect URL")], -1 /* HOISTED */);
+var _hoisted_52 = {
+  "class": "col-sm-8"
+};
+var _hoisted_53 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-sm-9 offset-sm-3"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  type: "submit",
+  "class": "btn btn-primary me-1 waves-effect waves-float waves-light float-right"
+}, " Submit ")], -1 /* HOISTED */);
+var _hoisted_54 = {
+  "class": "tab-pane fade",
+  id: "bottom-contact",
+  role: "tabpanel",
+  "aria-labelledby": "bottom-contact-tab"
+};
+var _hoisted_55 = {
+  "class": "card"
+};
+var _hoisted_56 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "card-header d-flex justify-content-between"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", null, "SMTP Setup"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "For email send to user")])], -1 /* HOISTED */);
+var _hoisted_57 = {
+  "class": "card-body"
+};
+var _hoisted_58 = {
+  "class": "row"
+};
+var _hoisted_59 = {
+  "class": "col-6"
+};
+var _hoisted_60 = {
+  "class": "mb-2 row"
+};
+var _hoisted_61 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-sm-4"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "class": "col-form-label",
+  "for": "smtp-host"
+}, "SMTP Host")], -1 /* HOISTED */);
+var _hoisted_62 = {
+  "class": "col-sm-8"
+};
+var _hoisted_63 = {
+  "class": "col-6"
+};
+var _hoisted_64 = {
+  "class": "mb-2 row"
+};
+var _hoisted_65 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-sm-4"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "class": "col-form-label",
+  "for": "smtp-port"
+}, "SMTP Port")], -1 /* HOISTED */);
+var _hoisted_66 = {
+  "class": "col-sm-8"
+};
+var _hoisted_67 = {
+  "class": "col-6"
+};
+var _hoisted_68 = {
+  "class": "mb-2 row"
+};
+var _hoisted_69 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-sm-4"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "class": "col-form-label",
+  "for": "smtp-username"
+}, "SMTP Username")], -1 /* HOISTED */);
+var _hoisted_70 = {
+  "class": "col-sm-8"
+};
+var _hoisted_71 = {
+  "class": "col-6"
+};
+var _hoisted_72 = {
+  "class": "mb-2 row"
+};
+var _hoisted_73 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-sm-4"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "class": "col-form-label",
+  "for": "smtp-password"
+}, "SMTP Password")], -1 /* HOISTED */);
+var _hoisted_74 = {
+  "class": "col-sm-8"
+};
+var _hoisted_75 = {
+  "class": "col-6"
+};
+var _hoisted_76 = {
+  "class": "mb-2 row"
+};
+var _hoisted_77 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-sm-4"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "class": "col-form-label",
+  "for": "smtp-email"
+}, "SMTP Email")], -1 /* HOISTED */);
+var _hoisted_78 = {
+  "class": "col-sm-8"
+};
+var _hoisted_79 = {
+  "class": "col-6"
+};
+var _hoisted_80 = {
+  "class": "mb-2 row"
+};
+var _hoisted_81 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-sm-4"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "class": "col-form-label",
+  "for": "smtp-sender"
+}, "SMTP Sender")], -1 /* HOISTED */);
+var _hoisted_82 = {
+  "class": "col-sm-8"
+};
+var _hoisted_83 = {
+  "class": "col-6"
+};
+var _hoisted_84 = {
+  "class": "mb-2 row"
+};
+var _hoisted_85 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-sm-4"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "class": "col-form-label",
+  "for": "smtp-encryption"
+}, "SMTP Encryption")], -1 /* HOISTED */);
+var _hoisted_86 = {
+  "class": "col-sm-8"
+};
+var _hoisted_87 = {
+  "class": "col-6"
+};
+var _hoisted_88 = {
+  "class": "mb-2 row"
+};
+var _hoisted_89 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-sm-4"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "class": "col-form-label",
+  "for": "smtp-port"
+}, "SMTP Port")], -1 /* HOISTED */);
+var _hoisted_90 = {
+  "class": "col-sm-8"
+};
+var _hoisted_91 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-sm-9 offset-sm-3"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  type: "submit",
+  "class": "btn btn-primary me-1 waves-effect waves-float waves-light float-right"
+}, " Submit ")], -1 /* HOISTED */);
+var _hoisted_92 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "row"
+}, null, -1 /* HOISTED */);
+var _hoisted_93 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "row"
+}, null, -1 /* HOISTED */);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _this$app_settings;
   var _component_breadcrumb = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("breadcrumb");
-  var _component_loader_box = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("loader-box");
   var _component_upload_media = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("upload-media");
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_breadcrumb, {
     active_name: "App Settings"
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, $data.loading ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_loader_box, {
-    key: 0
-  })) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [$data.updateImage ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_upload_media, {
+  }), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <loader-box v-if=\"loading\"></loader-box> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [$data.updateImage ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_upload_media, {
     key: 0,
     "class": "round",
     server: "/app-thumbnail-upload",
     onMedia: $options.Media,
     ref: "upload-media"
-  }, null, 8 /* PROPS */, ["onMedia"])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  }, null, 8 /* PROPS */, ["onMedia"])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     "class": "round",
     src: "".concat($data.url, "/img/app/").concat((_this$app_settings = this.app_settings) === null || _this$app_settings === void 0 ? void 0 : _this$app_settings.thumbnail),
     height: "150",
     width: "150",
     alt: "img-placeholder"
-  }, null, 8 /* PROPS */, _hoisted_12), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  }, null, 8 /* PROPS */, _hoisted_15), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
     onClick: _cache[0] || (_cache[0] = function ($event) {
       return $data.updateImage = true;
     }),
@@ -227,7 +515,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onSubmit: _cache[4] || (_cache[4] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $options.onSubmit && $options.onSubmit.apply($options, arguments);
     }, ["prevent"]))
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [_hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [_hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
     id: "app-title",
     "class": "form-control",
@@ -236,7 +524,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return $data.app_settings.app_title = $event;
     }),
     placeholder: "App Name"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.app_title]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [_hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.app_title]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [_hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
     id: "copyright",
     "class": "form-control",
@@ -245,7 +533,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return $data.app_settings.copyright = $event;
     }),
     placeholder: "Copyright"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.copyright]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [_hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.copyright]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [_hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
     type: "text",
     id: "app-description",
     "class": "form-control",
@@ -254,7 +542,122 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return $data.app_settings.app_description = $event;
     }),
     placeholder: "App Description"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.app_description]])])])]), _hoisted_26])], 32 /* HYDRATE_EVENTS */)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"row\">\r\n              <div class=\"col-xl-6 col-lg-6\">\r\n                <div class=\"row\">\r\n                  <div class=\"col-sm-3 mb-2\">\r\n              \r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Company Image</label\r\n                          >\r\n                     \r\n                  </div>\r\n                  <div class=\"col-sm-9 mb-2\">\r\n                        <upload-media\r\n                          v-if=\"updateImage\"\r\n                          class=\"round\"\r\n                          server=\"/app-thumbnail-upload\"\r\n                          @media=\"Media\"\r\n                          ref=\"upload-media\"\r\n                        >\r\n                        </upload-media>\r\n                      <div  v-else class=\"profile-img app-setting-image\">\r\n                          <img class=\"round\" :src=\"`${url}/img/app/${this.app_settings?.thumbnail}`\" \r\n                          height=\"150\" width=\"150\" alt=\"img-placeholder\"/>  \r\n                          <i @click=\"updateImage = true\"  class=\"fa fa-close ml-4 cursor-pointer\"></i>\r\n                      </div>\r\n                  </div>\r\n                  </div>\r\n                <form class=\"form form-horizontal\" v-on:submit.prevent=\"onSubmit\">\r\n                  <div class=\"row\">\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Company Name</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"company-name\"\r\n                            class=\"form-control\"\r\n                            name=\"company_name\"\r\n                            v-model=\"app_settings.company_name\"\r\n                            placeholder=\"Company Name\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Tax ID</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"tax_id\"\r\n                            class=\"form-control\"\r\n                            name=\"tax_id\"\r\n                            v-model=\"app_settings.tax_id\"\r\n                            placeholder=\"Tax Name\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >VAT No</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"vat_no\"\r\n                            class=\"form-control\"\r\n                            name=\"vat_no\"\r\n                            v-model=\"app_settings.vat_no\"\r\n                            placeholder=\"VAT No\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >HBR No</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"hbr_no\"\r\n                            class=\"form-control\"\r\n                            name=\"hbr_no\"\r\n                            v-model=\"app_settings.hbr_no\"\r\n                            placeholder=\"HBR No\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Provisional Client</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"number\"\r\n                            id=\"provisional_client\"\r\n                            class=\"form-control\"\r\n                            name=\"provisional_client\"\r\n                            v-model=\"app_settings.provisional_client\"\r\n                            placeholder=\"Provisional Client\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Provisional Contractor</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"number\"\r\n                            id=\"provisional_contractor\"\r\n                            class=\"form-control\"\r\n                            name=\"provisional_contractor\"\r\n                            v-model=\"app_settings.provisional_contractor\"\r\n                            placeholder=\"Provisional Contractor\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                     <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Handling Fee</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"number\"\r\n                            id=\"handling_fee\"\r\n                            class=\"form-control\"\r\n                            name=\"handling_fee\"\r\n                            v-model=\"app_settings.handling_fee\"\r\n                            placeholder=\"Handling Fee\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-sm-9 offset-sm-3\">\r\n                      <button\r\n                        type=\"submit\"\r\n                        class=\"\r\n                          btn btn-primary\r\n                          me-1\r\n                            waves-effect waves-float waves-light float-right\r\n                        \"\r\n                      >\r\n                        Submit\r\n                      </button>\r\n                        \r\n                    </div>\r\n                  </div>\r\n                </form>\r\n              </div>\r\n              <div class=\"col-xl-6 col-lg-6\">\r\n                <h2>Address <i class=\"fa fa-plus-circle\"></i></h2>\r\n                 <form class=\"form form-horizontal\" v-on:submit.prevent=\"onSubmit\">\r\n                  <div class=\"row\">\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Country Name</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                           <select class=\"form-select\" id=\"selectDefault\" v-model=\"app_settings.country\">\r\n                                        <option v-for=\"(country, index) in countries\" :key=\"index\" :value=\"country.country_code\">{{country.country_name}}</option>\r\n  \r\n                                    </select>\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Street / House No</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-6\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"street\"\r\n                            class=\"form-control\"\r\n                            name=\"street\"\r\n                            v-model=\"app_settings.street\"\r\n                            placeholder=\"Street\"\r\n                          />\r\n                        </div>\r\n                         <div class=\"col-sm-3\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"house_no\"\r\n                            class=\"form-control\"\r\n                            name=\"house_no\"\r\n                            v-model=\"app_settings.house_no\"\r\n                            placeholder=\"House No\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Zip code / Town</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-3\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"zip_code\"\r\n                            class=\"form-control\"\r\n                            name=\"zip_code\"\r\n                            v-model=\"app_settings.zip_code\"\r\n                            placeholder=\"Zip code\"\r\n                          />\r\n                        </div>\r\n                          <div class=\"col-sm-6\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"town\"\r\n                            class=\"form-control\"\r\n                            name=\"town\"\r\n                            v-model=\"app_settings.town\"\r\n                            placeholder=\"Town\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >State</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"state\"\r\n                            class=\"form-control\"\r\n                            name=\"state\"\r\n                            v-model=\"app_settings.state\"\r\n                            placeholder=\"State\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                      <div class=\"form-check form-check-primary form-switch\">\r\n                        <input type=\"checkbox\" name=\"use_as_billing\" v-model=\"app_settings.use_as_billing\"  :checked=\"app_settings.use_as_billing == 1\" class=\"form-check-input mt-6\" id=\"customSwitch3\">\r\n                        <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Use as billing address?</label>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"col-sm-9 offset-sm-3\">\r\n                      <button\r\n                        type=\"submit\"\r\n                        class=\"\r\n                          btn btn-primary\r\n                          me-1\r\n                            waves-effect waves-float waves-light float-right\r\n                        \"\r\n                      >\r\n                        Submit\r\n                      </button>\r\n                        \r\n                    </div>\r\n                  </div>\r\n                </form>\r\n  \r\n                 <h2>Contact <i class=\"fa fa-plus-circle\"></i></h2>\r\n                 <form class=\"form form-horizontal\" v-on:submit.prevent=\"onSubmit\">\r\n                  <div class=\"row\">\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Billing E-mail</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"billing_email\"\r\n                            class=\"form-control\"\r\n                            name=\"billing_email\"\r\n                            v-model=\"app_settings.billing_email\"\r\n                            placeholder=\"Billing E-mail\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Support Email</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"support_email\"\r\n                            class=\"form-control\"\r\n                            name=\"support_email\"\r\n                            v-model=\"app_settings.support_email\"\r\n                            placeholder=\"Support Email\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Phone</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"phone\"\r\n                            class=\"form-control\"\r\n                            name=\"phone\"\r\n                            v-model=\"app_settings.phone\"\r\n                            placeholder=\"Phone\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-12\">\r\n                      <div class=\"mb-2 row\">\r\n                        <div class=\"col-sm-3\">\r\n                          <label class=\"col-form-label\" for=\"first-name\"\r\n                            >Mobile</label\r\n                          >\r\n                        </div>\r\n                        <div class=\"col-sm-9\">\r\n                          <input\r\n                            type=\"text\"\r\n                            id=\"mobile\"\r\n                            class=\"form-control\"\r\n                            name=\"mobile\"\r\n                            v-model=\"app_settings.mobile\"\r\n                            placeholder=\"Mobile\"\r\n                          />\r\n                        </div>\r\n                      </div>\r\n                    </div>\r\n                    <div class=\"col-sm-9 offset-sm-3\">\r\n                      <button\r\n                        type=\"submit\"\r\n                        class=\"\r\n                          btn btn-primary\r\n                          me-1\r\n                            waves-effect waves-float waves-light float-right\r\n                        \"\r\n                      >\r\n                        Submit\r\n                      </button>\r\n                        \r\n                    </div>\r\n                  </div>\r\n                </form>\r\n              </div>\r\n            </div> ")]))])])])]);
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.app_description]])])])]), _hoisted_29])], 32 /* HYDRATE_EVENTS */)])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_30, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+    "class": "form form-horizontal",
+    onSubmit: _cache[9] || (_cache[9] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+      return $options.onSubmit && $options.onSubmit.apply($options, arguments);
+    }, ["prevent"]))
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [_hoisted_33, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [_hoisted_35, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_37, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "checkbox",
+    "onUpdate:modelValue": _cache[5] || (_cache[5] = function ($event) {
+      return $data.app_settings.allow_google_login = $event;
+    }),
+    checked: ""
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, $data.app_settings.allow_google_login]]), _hoisted_38])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_40, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_41, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_42, [_hoisted_43, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_44, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "password",
+    id: "google-client-id",
+    "class": "form-control",
+    name: "google_client_id",
+    "onUpdate:modelValue": _cache[6] || (_cache[6] = function ($event) {
+      return $data.app_settings.google_client_id = $event;
+    }),
+    placeholder: "Google Client ID"
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.google_client_id]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_45, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_46, [_hoisted_47, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_48, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "password",
+    id: "google-client-secret",
+    "class": "form-control",
+    name: "google_client_secret",
+    "onUpdate:modelValue": _cache[7] || (_cache[7] = function ($event) {
+      return $data.app_settings.google_client_secret = $event;
+    }),
+    placeholder: "Google Client Secret"
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.google_client_secret]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_49, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_50, [_hoisted_51, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_52, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    id: "google-redirect-url",
+    "class": "form-control",
+    name: "google_redirect_url",
+    "onUpdate:modelValue": _cache[8] || (_cache[8] = function ($event) {
+      return $data.app_settings.google_redirect_url = $event;
+    }),
+    placeholder: "Google Redirect URL"
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.google_redirect_url]])])])]), _hoisted_53])])])], 32 /* HYDRATE_EVENTS */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_54, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+    "class": "form form-horizontal",
+    onSubmit: _cache[18] || (_cache[18] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+      return $options.onSubmit && $options.onSubmit.apply($options, arguments);
+    }, ["prevent"]))
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_55, [_hoisted_56, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_57, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_58, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_59, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_60, [_hoisted_61, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_62, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    id: "smtp-host",
+    "class": "form-control",
+    name: "smtp_host",
+    "onUpdate:modelValue": _cache[10] || (_cache[10] = function ($event) {
+      return $data.app_settings.smtp_host = $event;
+    }),
+    placeholder: "SMTP Host"
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.smtp_host]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_63, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_64, [_hoisted_65, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_66, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    id: "smtp-host",
+    "class": "form-control",
+    name: "smtp_port",
+    "onUpdate:modelValue": _cache[11] || (_cache[11] = function ($event) {
+      return $data.app_settings.smtp_port = $event;
+    }),
+    placeholder: "SMTP Port"
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.smtp_port]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_67, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_68, [_hoisted_69, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_70, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    id: "smtp-username",
+    "class": "form-control",
+    name: "smtp_username",
+    "onUpdate:modelValue": _cache[12] || (_cache[12] = function ($event) {
+      return $data.app_settings.smtp_username = $event;
+    }),
+    placeholder: "SMTP Port"
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.smtp_username]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_71, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_72, [_hoisted_73, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_74, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "password",
+    id: "smtp-password",
+    "class": "form-control",
+    name: "password",
+    "onUpdate:modelValue": _cache[13] || (_cache[13] = function ($event) {
+      return $data.app_settings.smtp_password = $event;
+    }),
+    placeholder: "SMTP Password"
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.smtp_password]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_75, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_76, [_hoisted_77, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_78, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "email",
+    id: "smtp-email",
+    "class": "form-control",
+    name: "email",
+    "onUpdate:modelValue": _cache[14] || (_cache[14] = function ($event) {
+      return $data.app_settings.email = $event;
+    }),
+    placeholder: "SMTP Email"
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.email]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_79, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_80, [_hoisted_81, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_82, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    id: "smtp-sender",
+    "class": "form-control",
+    name: "sender",
+    "onUpdate:modelValue": _cache[15] || (_cache[15] = function ($event) {
+      return $data.app_settings.sender = $event;
+    }),
+    placeholder: "SMTP Sender"
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.sender]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_83, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_84, [_hoisted_85, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_86, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    id: "smtp-encryption",
+    "class": "form-control",
+    name: "encryption",
+    "onUpdate:modelValue": _cache[16] || (_cache[16] = function ($event) {
+      return $data.app_settings.encryption = $event;
+    }),
+    placeholder: "SMTP Encryption"
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.encryption]])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_87, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_88, [_hoisted_89, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_90, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    id: "smtp-host",
+    "class": "form-control",
+    name: "smtp_port",
+    "onUpdate:modelValue": _cache[17] || (_cache[17] = function ($event) {
+      return $data.app_settings.smtp_port = $event;
+    }),
+    placeholder: "SMTP Port"
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.app_settings.smtp_port]])])])]), _hoisted_91])])])], 32 /* HYDRATE_EVENTS */)])])]), _hoisted_92, _hoisted_93])]);
 }
 
 /***/ }),
@@ -344,7 +747,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.image-container .images-preview{\r\n      height: 100px !important;\r\n      width: 130px !important;\r\n      border: 1px solid #e1e1e1;\r\n      padding: 10px;\r\n      border-radius: 8px;\r\n      box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;\n}\r\n  ", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.image-container .images-preview {\r\n  height: 100px !important;\r\n  width: 130px !important;\r\n  border: 1px solid #e1e1e1;\r\n  padding: 10px;\r\n  border-radius: 8px;\r\n  box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
