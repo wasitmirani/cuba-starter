@@ -12,9 +12,9 @@ let getComponent=(file_name:String)=>{
 
 const per_fix="/portal";
 const routes = [
-    // { path: "/:catchAll(.*)",
-    // name: "NotFound",
-    // component: () => getComponent("error/404") },
+    { path: "/:catchAll(.*)",
+    name: "NotFound",
+    component: () => getComponent("error/404") },
     // { path: "/unauthorized/user", component: () => setComponent("error/401"),name: "unauthorized" },
     {
         path: "/",

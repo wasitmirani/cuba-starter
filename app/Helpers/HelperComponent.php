@@ -81,6 +81,20 @@ class HelperComponent
             setSingleLink('QR Codes','stroke-animation','qrcodes-links','qrcodes-links'),
             setSingleLink('Projects','stroke-knowledgebase','qrcodes-links','qrcodes-links'),
             [
+                "heading" => "Reports",
+                "heading_can" => "reports-heading-view"
+            ],
+            setSingleLink('Daily Report','stroke-charts','daily-reports','daily-reports'),
+            setSingleLink('Weekly Report','stroke-charts','weekly-reports','weekly-reports'),
+            setSingleLink('Monthly Report','stroke-charts','monthly-reports','monthly-reports'),
+
+            [
+                "heading" => "Notification",
+                "heading_can" => "notification-heading-view"
+            ],
+            setSingleLink('News Alerts','notification','news-alerts','news-alerts'),
+
+            [
                 "heading" => "Tools",
                 "heading_can" => "tools-heading-view"
             ],
