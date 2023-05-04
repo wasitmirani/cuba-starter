@@ -33,7 +33,7 @@ var _hoisted_1 = {
 var _hoisted_2 = {
   "class": "container"
 };
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<img class=\"img-100\" src=\"/assets/images/other-images/sad.png\" alt=\"\"><div class=\"error-heading\"><h2 class=\"headline font-danger\">404</h2></div><div class=\"col-md-8 offset-md-2\"><p class=\"sub-content\">The page you are attempting to reach is currently not available. This may be because the page does not exist or has been moved.</p></div>", 3);
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<img class=\"img-100\" src=\"/assets/images/other-images/sad.png\" alt=\"\"><div class=\"mt-3\"><img src=\"/assets/images/page-misc-error-light.png\" alt=\"page-misc-error-light\" width=\"500\" class=\"img-fluid\" data-app-dark-img=\"/page-misc-error-dark.png\" data-app-light-img=\"/page-misc-error-light.png\"></div><div class=\"error-heading\"><h2 class=\"headline font-danger\">404</h2></div><div class=\"col-md-8 offset-md-2\"><p class=\"sub-content\">The page you are attempting to reach is currently not available. This may be because the page does not exist or has been moved.</p></div>", 4);
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {

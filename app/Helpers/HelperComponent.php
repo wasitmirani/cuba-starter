@@ -107,7 +107,7 @@ class HelperComponent
 
                 "title" => 'Settings',
                 'can' => 'dropdown-settings',
-                "icon" => "stroke-others",
+                "icon" => "stroke-settings",
                 'type' => 'multi',
                 "sub_menu" => [
                     setSubMenu(
