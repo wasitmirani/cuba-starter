@@ -42,7 +42,7 @@ class HelperComponent
 
                 "title" => 'User Management',
                 'can' => 'dropdown-usersmanagement',
-                "icon" => "fill-user",
+                "icon" => "stroke-user",
                 'type' => 'multi',
                 "sub_menu" => [
                     setSubMenu(
@@ -69,16 +69,29 @@ class HelperComponent
             ],
 
 
+            // stroke-builders
+            [
+                "heading" => "Links",
+                "heading_can" => "links-heading-view",
+
+            ],
+
+            setSingleLink('Bio Links','stroke-builders','bio-links','bio-links'),
+            setSingleLink('Short Links','stroke-button','short-links','short-links'),
+            setSingleLink('QR Codes','stroke-animation','qrcodes-links','qrcodes-links'),
+            setSingleLink('Projects','stroke-knowledgebase','qrcodes-links','qrcodes-links'),
             [
                 "heading" => "Tools",
-                "heading_can" => "tools-heading-view",
+                "heading_can" => "tools-heading-view"
             ],
+            setSingleLink('Pricing Plans','tag','pricing-plans','pricing-plans'),
+
 
             [
 
                 "title" => 'Settings',
                 'can' => 'dropdown-settings',
-                "icon" => "mdi mdi-cog-outline",
+                "icon" => "stroke-others",
                 'type' => 'multi',
                 "sub_menu" => [
                     setSubMenu(
@@ -87,14 +100,16 @@ class HelperComponent
                         "profile-read",
                         "/profile-settings",
                     ),
-
-
+                    setSubMenu(
+                        "Current Plan",
+                        null,
+                        "current-plan-read",
+                        "/current-plan",
+                    ),
 
                 ]
 
             ],
-
-
         ];
     }
 }
