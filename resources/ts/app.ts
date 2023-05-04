@@ -11,6 +11,7 @@ import router from "./router";
 // import FloatingVue from 'floating-vue'
 // import * as moment from 'moment'
 // import 'floating-vue/dist/style.css';
+   import Breadcrumb from "./vue/backend/pages/components/BreadcrumbComponent.vue";
 
 
 
@@ -36,4 +37,6 @@ app.config.globalProperties.$filters = {
       return "N/A";
     },
   }
+
+app.component('Breadcrumb', Breadcrumb);
 app.use(router).mount("#app");
