@@ -19978,10 +19978,13 @@ var getComponent = function getComponent(file_name) {
   return route;
 };
 var per_fix = "/portal";
-var routes = [
-// { path: "/:catchAll(.*)",
-// name: "NotFound",
-// component: () => getComponent("error/404") },
+var routes = [{
+  path: "/:catchAll(.*)",
+  name: "NotFound",
+  component: function component() {
+    return getComponent("error/404");
+  }
+},
 // { path: "/unauthorized/user", component: () => setComponent("error/401"),name: "unauthorized" },
 {
   path: "/",
@@ -39074,6 +39077,10 @@ var map = {
 	"./dashboard/MasterDashboardComponent.vue": [
 		"./resources/ts/vue/backend/pages/dashboard/MasterDashboardComponent.vue",
 		"resources_ts_vue_backend_pages_dashboard_MasterDashboardComponent_vue"
+	],
+	"./error/404Component.vue": [
+		"./resources/ts/vue/backend/pages/error/404Component.vue",
+		"resources_ts_vue_backend_pages_error_404Component_vue"
 	]
 };
 function webpackAsyncContext(req) {
@@ -42823,7 +42830,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_ts_vue_backend_pages_HomeComponent_vue":1,"resources_ts_vue_backend_pages_dashboard_MasterDashboardComponent_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_ts_vue_backend_pages_HomeComponent_vue":1,"resources_ts_vue_backend_pages_dashboard_MasterDashboardComponent_vue":1,"resources_ts_vue_backend_pages_error_404Component_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
