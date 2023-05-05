@@ -55,19 +55,39 @@
       <div>
       <a class="logo text-start" href="{{url('/')}}"><img class="img-fluid for-light" src="/assets/images/logo/logo.png" alt="looginpage"><img class="img-fluid for-dark" src="/assets/images/logo/logo_dark.png" alt="looginpage"></a></div>
       <div class="login-main">
-        <form class="theme-form">
+
+        <x-auth-session-status class="mb-4" :status="session('status')" />
+
+        <!-- Validation Errors -->
+
+
+            <form method="POST" action="{{ route('login') }}" class="theme-form">
+                @csrf
           <h4>Sign in to account</h4>
+         <!-- Session Status -->
+
           <p>Enter your email & password to login</p>
           <div class="form-group">
             <label class="col-form-label">Email Address</label>
-            <input class="form-control" type="email" required="" placeholder="Test@gmail.com">
+
+            <input type="email"  value="{{ old('email') }}" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="Enter your email or username" autofocus>
+            @error('email')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+           @enderror
           </div>
           <div class="form-group">
             <label class="col-form-label">Password</label>
             <div class="form-input position-relative">
-              <input class="form-control" type="password" name="login[password]" required="" placeholder="*********">
+              <input class="form-control" type="password" name="password" required="" placeholder="*********">
               <div class="show-hide"><span class="show">                         </span></div>
             </div>
+            @error('password')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
           </div>
           <div class="form-group mb-0">
             <div class="checkbox p-0">

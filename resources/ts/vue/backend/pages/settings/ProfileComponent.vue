@@ -470,7 +470,7 @@
     </div>
   </div>
 </template>
-  
+
   <script>
 // import breadcrumb from "../../components/breadcrumbComponent.vue";
 import UploadMedia from "vue-media-upload";
@@ -538,7 +538,7 @@ export default {
   },
 };
 </script>
-  
+
   <style>
 .image-container .images-preview {
   height: 100px !important;

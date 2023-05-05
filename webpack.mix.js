@@ -16,9 +16,12 @@ const mix = require('laravel-mix');
 
  mix.ts('resources/ts/app.ts', 'public/js').vue();
 
+
+
+
 mix.options({
     hmrOptions: {
-        host: process.env.APP_URL,  // edulms.test is my local domain used for testing
+        host: process.env.APP_URL,  // app.test is my local domain used for testing
         port: 8080,
     }
  });
