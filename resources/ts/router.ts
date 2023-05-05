@@ -2,36 +2,38 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 
+const getComponent=  (file_name:string)=> {
+    return   import(`./vue/backend/pages/${file_name}Component.vue`)
+  }
+const prefix="/portal";
+const setRoute=  (url:string,name:string,path:string,permission:string)=>{
+    return {
+      path: url,
+      name: name,
+      component: () =>  getComponent(path),
+      meta: { permissions: "dashboard-view" }
 
-let getComponent=(file_name:String)=>{
-    const route=import(`./vue/backend/pages/${file_name}Component.vue`);
-    return route;
-}
+    }
+  }
+
 
 
 
 const per_fix="/portal";
 const routes = [
-    { path: "/:catchAll(.*)",
-    name: "NotFound",
-    component: () => getComponent("error/404") },
-    // { path: "/unauthorized/user", component: () => setComponent("error/401"),name: "unauthorized" },
+    {
+        path: "/dashboard",
+        redirect: { name: 'dashboard' }
+    },
     {
         path: "/",
-        redirect: { name: 'master_dashboard' }
+        redirect: { name: 'dashboard' }
     },
-    {
-        path: `/dashboard`, component:()=>getComponent("dashboard/MasterDashboard"), name: "master_dashboard",
-        meta: { permissions: "dashboard-view" }
-    },
-    {
-        path: `/profile-settings`, component:()=>getComponent("settings/Profile"), name: "profile_settings",
-        meta: { permissions: "profile-settings-view" }
-    },
-    {
-        path: `/account-settings`, component:()=>getComponent("settings/Account"), name: "account_settings",
-        meta: { permissions: "account-settings-view" }
-    },
+    setRoute('/:catchAll(.*)','404','error/404',''),
+    setRoute("/dashboard","dashboard","dashboard/MasterDashboard",'dashboard-view'),
+    setRoute("/users","users","user/User",'users-read'),
+    setRoute("/profile-settings","profile-settings","settings/Profile",'profile-read'),
+    setRoute("/account-settings","account-settings","settings/Account",'account-view'),
 
 
 
