@@ -29,7 +29,10 @@
             <div class="col-sm-12">
                 <div class="card">
                   <div class="card-header">
-                    <h3>Hoverable Rows With Horizontal Border</h3><span>Hoverable row use a class  <code>table-hover</code> and for Horizontal border use a class <code>.table-border-horizontal</code> , Solid border Use a class<code>.border-solid .table</code>class.</span>
+                    <h3>Users List</h3><span>
+                    <!-- Any Comment here -->
+                    </span>
+                    <button class="btn btn-primary" type="button">Add User</button>
                   </div>
                   <div class="table-responsive signal-table">
                     <table class="table table-hover">
