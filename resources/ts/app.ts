@@ -8,10 +8,12 @@ import { createApp } from "vue";
 
 import App from "./vue/App.vue";
 import router from "./router";
+
 // import FloatingVue from 'floating-vue'
 // import * as moment from 'moment'
 // import 'floating-vue/dist/style.css';
-   import Breadcrumb from "./vue/backend/pages/components/BreadcrumbComponent.vue";
+import Breadcrumb from "./vue/backend/pages/components/BreadcrumbComponent.vue";
+import SearchInput from "./vue/backend/pages/components/SerachInputComponent.vue";
 
 
 
@@ -39,4 +41,5 @@ app.config.globalProperties.$filters = {
   }
 
 app.component('Breadcrumb', Breadcrumb);
+app.component('SearchInput',SearchInput)
 app.use(router).mount("#app");
