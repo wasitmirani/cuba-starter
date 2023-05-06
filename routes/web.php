@@ -19,9 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('backend.pages.index');
-})->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('backend.pages.index');
+// })->name('dashboard');
 
 // /->middleware(['auth', 'verified'])-
 
@@ -34,7 +34,7 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 
-Route::get('/{any}',[BackendController::class,'index']);
+Route::get('/{any}',[BackendController::class,'index'])->middleware(['auth', 'verified']);
 
 
 

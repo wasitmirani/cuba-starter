@@ -41,6 +41,7 @@
                                     <button class="btn btn-primary "  type="button">Add User</button>
                                     <button class="ml btn btn-light"  type="button" data-bs-toggle="tooltip" title="Filters" data-bs-original-title="Filters">
                                     <i class="fa-solid fa-filter" style="font-size: 16px;" > </i>
+                                    <i data-feather="filter"></i>
                                     </button>
                                 </div>
 

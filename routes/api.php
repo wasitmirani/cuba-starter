@@ -22,6 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
+Route::middleware('auth:sanctum')->group(function () {
 Route::prefix('config')->group(function () {
     Route::get('/sidebar-menu',[LayoutController::class,'getSideBarMenu']);
     Route::post('update-app-settings',[SettingsController::class,'updateSettings']);
@@ -34,5 +35,7 @@ Route::prefix('config')->group(function () {
    Route::get('/user-settings',[DashboardController::class,'getUserSettings']);
    Route::post('/user-settings',[DashboardController::class,'UpdateUserSettings']);
    Route::post('app-thumbnail-upload',[DashboardController::class,'uploadAppThumbnail']);
-   
+
 Route::resource('user', UserController::class);
+
+});

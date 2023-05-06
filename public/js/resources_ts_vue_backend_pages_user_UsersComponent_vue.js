@@ -105,7 +105,7 @@ var _hoisted_11 = {
 var _hoisted_12 = {
   "class": "col-md-4 col-sm-12"
 };
-var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-md-8 col-sm-12\" data-v-7eda6312><div style=\"float:right;\" data-v-7eda6312><button class=\"btn btn-primary\" type=\"button\" data-v-7eda6312>Add User</button><button class=\"ml btn btn-light\" type=\"button\" data-bs-toggle=\"tooltip\" title=\"Filters\" data-bs-original-title=\"Filters\" data-v-7eda6312><i class=\"fa-solid fa-filter\" style=\"font-size:16px;\" data-v-7eda6312></i></button></div></div>", 1);
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-md-8 col-sm-12\" data-v-7eda6312><div style=\"float:right;\" data-v-7eda6312><button class=\"btn btn-primary\" type=\"button\" data-v-7eda6312>Add User</button><button class=\"ml btn btn-light\" type=\"button\" data-bs-toggle=\"tooltip\" title=\"Filters\" data-bs-original-title=\"Filters\" data-v-7eda6312><i class=\"fa-solid fa-filter\" style=\"font-size:16px;\" data-v-7eda6312></i><i data-feather=\"filter\" data-v-7eda6312></i></button></div></div>", 1);
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Breadcrumb = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Breadcrumb");
   var _component_SearchInput = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("SearchInput");
