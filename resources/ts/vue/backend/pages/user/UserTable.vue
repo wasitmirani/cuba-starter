@@ -6,23 +6,22 @@
               <th class="f-light">User</th>
               <th class="f-light">Role</th>
               <th class="f-light">Plan</th>
-              <th class="f-light">Billing</th>
               <th class="f-light">Status</th>
               <th class="f-light">Action</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr  v-for="user in users" :key="user.id">
               <td>
                 <div class="product-content">
                   <div class="order-image"><img src="/assets/images/dashboard-2/order/sub-product/4.png" alt="t-shirt"></div>
                   <div>
-                    <h6 class="f-14 mb-0"><a href="order-history.html">T-shirt</a></h6><span class="f-light f-12">Id : #CFDE-2163</span>
+                    <h6 class="f-14 mb-0"><a href="order-history.html">{{user.name}}</a></h6><span class="f-light f-12">Email : {{user.email}}</span>
                   </div>
                 </div>
               </td>
-              <td class="f-w-500">X1</td>
-              <td class="f-w-500">$56.00</td>
+              <td class="f-w-500">{{user?.roles}}</td>
+              <td class="f-w-500">{{user?.plan}}</td>
               <td class="f-w-500">
                 <div class="recent-status font-success">
                   <svg class="me-1">
@@ -30,27 +29,14 @@
                   </svg>Verified
                 </div>
               </td>
-              <td class="f-w-500">$100.00</td>
-            </tr>
-            <tr>
-              <td>
-                <div class="product-content">
-                  <div class="order-image"><img src="/assets/images/dashboard-2/order/sub-product/3.png" alt="t-shirt"></div>
-                  <div>
-                    <h6 class="f-14 mb-0"><a href="order-history.html">Pink T-shirt</a></h6><span class="f-light f-12">Id : #CFDE-2780</span>
-                  </div>
-                </div>
-              </td>
-              <td class="f-w-500">X2</td>
-              <td class="f-w-500">$156.00</td>
               <td class="f-w-500">
-                <div class="recent-status font-danger">
-                  <svg class="me-1">
-                    <use href="/assets/svg/icon-sprite.svg#24-hour"> </use>
-                  </svg>Rejected
-                </div>
+              <a href="http://">
+                <i class="icofont icofont-ui-edit"></i>
+              </a> |
+              <a href="http://">
+              <i class="icofont icofont-trash"></i>
+              </a>
               </td>
-              <td class="f-w-500">$870.00</td>
             </tr>
           </tbody>
         </table>
@@ -58,7 +44,12 @@
 </template>
 <script>
 export default {
+props:['users','getUsers'],
+methods:{
+            getRoleName(){
 
+            },
+},
 }
 </script>
 <style lang="">

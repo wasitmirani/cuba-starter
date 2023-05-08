@@ -40,7 +40,6 @@
                                 <div style="float: right">
                                     <button class="btn btn-primary "  type="button">Add User</button>
                                     <button class="ml btn btn-light"  type="button" data-bs-toggle="tooltip" title="Filters" data-bs-original-title="Filters">
-                                    
                                     <i class="icofont icofont-filter" style="font-size: 16px;"></i>
                                     </button>
                                 </div>
@@ -49,7 +48,7 @@
                         </div>
                   </div>
 
-                    <UserTable></UserTable>
+                    <user-table :users="users"></user-table>
                 </div>
               </div>
         </div>
@@ -59,7 +58,28 @@
 import UserTable from "./UserTable";
 export default {
 components:{UserTable},
+data () {
+    return {
+      users: null,
+      loading: false,
 
+    }
+  },
+  method:{
+        getUsers(){
+            this.loading=true;
+            axios.get('/user').then((res)=>{
+                this.users=res.data.users;
+
+            });
+
+            this.loading=false;
+
+        }
+  },
+  mounted() {
+    this.getUsers();
+  },
 }
 </script>
 <style scoped>
