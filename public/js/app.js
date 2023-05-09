@@ -20000,7 +20000,7 @@ var routes = [{
   redirect: {
     name: 'dashboard'
   }
-}, setRoute('/:catchAll(.*)', '404', 'error/404', ''), setRoute("/dashboard", "dashboard", "dashboard/MasterDashboard", 'dashboard-view'), setRoute("/users", "users", "user/Users", 'users-read'), setRoute("/profile-settings", "profile-settings", "settings/Profile", 'profile-read'), setRoute("/account-settings", "account-settings", "settings/Account", 'account-view')];
+}, setRoute('/:catchAll(.*)', '404', 'error/404', ''), setRoute("/dashboard", "dashboard", "dashboard/MasterDashboard", 'dashboard-view'), setRoute("/users", "users", "user/Users", 'user-read'), setRoute("/user-create", "user-create", "user/CreateUser", 'user-create'), setRoute("/profile-settings", "profile-settings", "settings/Profile", 'profile-read'), setRoute("/account-settings", "account-settings", "settings/Account", 'account-view')];
 var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createRouter)({
   history: (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createWebHistory)(),
   routes: routes,
@@ -39443,6 +39443,10 @@ var map = {
 		"./resources/ts/vue/backend/pages/settings/ProfileComponent.vue",
 		"resources_ts_vue_backend_pages_settings_ProfileComponent_vue"
 	],
+	"./user/CreateUserComponent.vue": [
+		"./resources/ts/vue/backend/pages/user/CreateUserComponent.vue",
+		"resources_ts_vue_backend_pages_user_CreateUserComponent_vue"
+	],
 	"./user/UsersComponent.vue": [
 		"./resources/ts/vue/backend/pages/user/UsersComponent.vue",
 		"resources_ts_vue_backend_pages_user_UsersComponent_vue"
@@ -43195,7 +43199,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_ts_vue_backend_pages_HomeComponent_vue":1,"resources_ts_vue_backend_pages_dashboard_MasterDashboardComponent_vue":1,"resources_ts_vue_backend_pages_error_404Component_vue":1,"resources_ts_vue_backend_pages_settings_AccountComponent_vue":1,"resources_ts_vue_backend_pages_settings_ProfileComponent_vue":1,"resources_ts_vue_backend_pages_user_UsersComponent_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_ts_vue_backend_pages_HomeComponent_vue":1,"resources_ts_vue_backend_pages_dashboard_MasterDashboardComponent_vue":1,"resources_ts_vue_backend_pages_error_404Component_vue":1,"resources_ts_vue_backend_pages_settings_AccountComponent_vue":1,"resources_ts_vue_backend_pages_settings_ProfileComponent_vue":1,"resources_ts_vue_backend_pages_user_CreateUserComponent_vue":1,"resources_ts_vue_backend_pages_user_UsersComponent_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

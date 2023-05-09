@@ -35,19 +35,16 @@
                             <div class="col-md-4 col-sm-12">
                                 <SearchInput ></SearchInput>
                             </div>
-
                             <div class="col-md-8 col-sm-12">
                                 <div style="float: right">
-                                    <button class="btn btn-primary "  type="button">Add User</button>
+                                    <router-link class="btn btn-primary "   :to="{ name:'user-create'}">Add User</router-link>
                                     <button class="ml btn btn-light"  type="button" data-bs-toggle="tooltip" title="Filters" data-bs-original-title="Filters">
                                     <i class="icofont icofont-filter" style="font-size: 16px;"></i>
                                     </button>
                                 </div>
-
                             </div>
                         </div>
                   </div>
-
                     <user-table :users="users"></user-table>
                 </div>
               </div>
@@ -60,9 +57,8 @@ export default {
 components:{UserTable},
 data () {
     return {
-      users: null,
+      users: {},
       loading: false,
-
     }
   },
   method:{
@@ -70,15 +66,12 @@ data () {
             this.loading=true;
             axios.get('/user').then((res)=>{
                 this.users=res.data.users;
-
             });
-
             this.loading=false;
-
         }
   },
   mounted() {
-    this.getUsers();
+    // this.getUsers();
   },
 }
 </script>

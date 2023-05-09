@@ -44,14 +44,12 @@
 </template>
 <script>
 export default {
-props:['users','getUsers'],
+props:['users'],
 methods:{
-            getRoleName(){
-
-            },
+          
 },
 }
 </script>
-<style lang="">
+<style >
 
 </style>

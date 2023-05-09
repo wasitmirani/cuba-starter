@@ -31,7 +31,8 @@ const routes = [
     },
     setRoute('/:catchAll(.*)','404','error/404',''),
     setRoute("/dashboard","dashboard","dashboard/MasterDashboard",'dashboard-view'),
-    setRoute("/users","users","user/Users",'users-read'),
+    setRoute("/users","users","user/Users",'user-read'),
+    setRoute("/user-create","user-create","user/CreateUser",'user-create'),
     setRoute("/profile-settings","profile-settings","settings/Profile",'profile-read'),
     setRoute("/account-settings","account-settings","settings/Account",'account-view'),
 
