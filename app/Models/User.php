@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Models\Role;
@@ -14,7 +15,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable,HasRoles;
+    use HasApiTokens, HasFactory, Notifiable,HasRoles,SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -41,7 +42,7 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
-        'token'
+        // 'token'
     ];
 
     /**
@@ -73,7 +74,7 @@ class User extends Authenticatable
     public function getUsers($request,$is_paginate=true){
         $query=request('query');
         $users= User::latest()->where('email', 'like', '%' . $query. '%');
-        $users= $users->with('client','roles','permissions')->withTrashed();
+        $users= $users->with('roles','permissions')->withTrashed();
         if(!empty( $query)){
             $users= $users->where('email', 'like', '%'.$query. '%');
         }

@@ -66,6 +66,8 @@ data () {
             this.loading=true;
             axios.get('/user').then((res)=>{
                 this.users=res.data.users;
+            }).catch((err)=>{
+                
             });
             this.loading=false;
         }

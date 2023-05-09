@@ -20876,8 +20876,7 @@ window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
  */
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-var token = "";
-// = user ? user.token : null;
+var token = user ? user.token : null;
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 window.axios.defaults.headers.common['Authorization'] = "Bearer " + token;
 window.axios.defaults.baseURL = window.location.origin + "/api/";
