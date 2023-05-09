@@ -40,7 +40,7 @@ __webpack_require__.r(__webpack_exports__);
       loading: false
     };
   },
-  method: {
+  methods: {
     getUsers: function getUsers() {
       var _this = this;
       this.loading = true;
@@ -51,7 +51,8 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    // this.getUsers();
+    console.log('test2');
+    this.getUsers();
   }
 });
 

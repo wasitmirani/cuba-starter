@@ -61,7 +61,7 @@ data () {
       loading: false,
     }
   },
-  method:{
+  methods:{
         getUsers(){
             this.loading=true;
             axios.get('/user').then((res)=>{
@@ -71,8 +71,10 @@ data () {
         }
   },
   mounted() {
-    // this.getUsers();
+    console.log('test2');
+    this.getUsers();
   },
+
 }
 </script>
 <style scoped>

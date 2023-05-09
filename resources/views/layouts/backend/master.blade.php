@@ -62,6 +62,19 @@
     <div id="app">
         @yield('content')
     </div>
+    <script>
+        @auth
+           window.user = {!! json_encode(Auth::user()->load(['roles']), true) !!};
+        let permissions = {!! json_encode(Auth::user()->getPermissionsViaRoles()->pluck('name'), true) !!};
+        @else
+          let user = [];
+           let permissions = [];
+       @endauth
+       localStorage.removeItem('permissions');
+       localStorage.setItem('permissions', JSON.stringify(permissions))
+       console.log('user', user);
+    </script>
+
 
     <!-- latest jquery-->
     <script src="{{asset('assets/js/jquery.min.js')}}"></script>
