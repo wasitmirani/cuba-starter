@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\backend\api\user;
 
 use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -45,27 +47,21 @@ class UserController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'phone' => ['required', 'string', 'max:255', 'unique:users'],
             'user_name' => ['string', 'max:255', 'unique:users'],
-            'roles'=>['required'],
+            // 'roles'=>['required'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        if(request()->user()->hasRole('super-admin') && !empty($request->client_id)) {
-            $client_id = $request->client_id;
-        }
-        else {
-            $client_id = request()->user()->client_id;
-        }
+
 
         $user_name = !empty($request->user_name) ? $request->user_name : strtolower(trim($request->name)) . rand(10, 1000900);
 
 
         $user = $this->user->create([
-            'name' => $request->first_name." ".$request->last_name,
+            'name' => $request->name." ".$request->last_name,
             'uid'=>(string) Str::uuid(),
             'email' => $request->email,
-            'first_name' => $request->first_name,
+            'first_name' => $request->name,
             'last_name' => $request->last_name,
-            'client_id' => $client_id,
             'slug' => $this->mapFirstNameLastSlug($request),
             'password' => Hash::make($request->password),
             'phone' => $request->phone,

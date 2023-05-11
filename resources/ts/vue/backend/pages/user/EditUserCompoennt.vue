@@ -1,8 +1,8 @@
 <template >
-    <Breadcrumb active_name="Create User "></Breadcrumb>
+    <Breadcrumb active_name="Update User"></Breadcrumb>
     <div class="container-fluid">
         <div class="edit-profile">
-            <user-form :user="user"></user-form>
+            <user-form :user="user" :edit="true"></user-form>
         </div>
       </div>
 </template>
