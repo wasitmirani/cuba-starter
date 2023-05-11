@@ -38,7 +38,7 @@
           </div>
         </div>
         <div class="col-xl-8">
-          <form class="card">
+          <form class="card "  v-on:submit.prevent="onSubmit">
             <div class="card-header">
               <h4 class="card-title mb-0">Create New User</h4>
               <div class="card-options"><a class="card-options-collapse" href="#" data-bs-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a><a class="card-options-remove" href="#" data-bs-toggle="card-remove"><i class="fe fe-x"></i></a></div>
@@ -123,6 +123,35 @@ props:['form','edit'],
 data:()=>({
     user:{},
 }),
+
+methods:{
+
+    restForm(){
+            this.user={};
+    },
+   async  onSubmit(){
+            if(!this.edit_mode){
+               await axios.post('/user', this.user).then((res)=>{
+                this.$router.push("/portal/users" );
+                this.$root.alertNotify(res.status,'Created successfully','success',res.data);
+                this.restForm();
+                }).catch((err)=>{
+                  this.errors = err.response.data;
+                this.$root.alertNotify(err.response.status, null, "error", err.response.data);
+
+                })
+            } else{
+              await axios.put('/user/' + this.form.id, this.user).then((res)=>{
+                this.$router.push("/portal/users" );
+                  this.$root.alertNotify(res.status,'Updated successfully','success',res.data);
+                //   this.restForm();
+              }).catch((err)=>{
+                this.$router.push("/users" );
+                  this.$root.alertNotify(err.response.status,null,'error', err.response.data);
+              })
+          }
+      },
+}
 }
 </script>
 <style lang="">

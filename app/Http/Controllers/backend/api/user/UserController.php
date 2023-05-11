@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Auth\Events\Registered;
 
 class UserController extends Controller
 {
@@ -69,15 +70,10 @@ class UserController extends Controller
             'thumbnail' => isset($request->thumbnail['name']) ? $request->thumbnail['name'] : "default.png",
 
         ]);
-        $role = Role::where('id', $request->roles['id'])->first();
-        $user->assignRole($role);
+        // $role = Role::where('id', $request->roles['id'])->first();
+        // $user->assignRole($role);
 
-        if($request->deleted_at == 0) {
-            $user->update([
-                'status' => 0
-            ]);
-            $user->delete();
-        }
+
 
         event(new Registered($user));
 
