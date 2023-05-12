@@ -31,7 +31,10 @@
                 </div>
                 <div class="mb-3">
                   <h6 class="form-label">Bio</h6>
-                  <textarea class="form-control" rows="5" v-model="user.bio"></textarea>
+                  <textarea   :class="`form-control ${this.$root.appendValidateClass(errors?.errors, 'name')}`" rows="5" v-model="user.bio"></textarea>
+
+
+              <validate-input :errors="errors?.errors" value="bio"></validate-input>
                 </div>
               </form>
             </div>
@@ -48,51 +51,63 @@
                 <div class="col-sm-6 col-md-6">
                     <div class="mb-3">
                       <label class="form-label">First Name</label>
-                      <input class="form-control" type="text" v-model="user.name" placeholder="First Name">
+                      <input :class="`form-control ${this.$root.appendValidateClass(errors?.errors, 'name')}`"  type="text" v-model="user.name" placeholder="First Name">
+                      <validate-input :errors="errors?.errors" value="name"></validate-input>
                     </div>
                   </div>
                   <div class="col-sm-6 col-md-6">
                     <div class="mb-3">
                       <label class="form-label">Last Name</label>
-                      <input class="form-control" v-model="user.last_name"  type="text" placeholder="Last Name">
+                      <input :class="`form-control ${this.$root.appendValidateClass(errors?.errors, 'last_name')}`" v-model="user.last_name"  type="text" placeholder="Last Name">
+                      <validate-input :errors="errors?.errors" value="last_name"></validate-input>
                     </div>
                   </div>
                 <div class="col-md-4">
                   <div class="mb-3">
                     <label class="form-label">Company</label>
-                    <input class="form-control" type="text" v-model="user.company" placeholder="Company">
+                    <input :class="`form-control ${this.$root.appendValidateClass(errors?.errors, 'company')}`"  type="text" v-model="user.company" placeholder="Company">
+                    <validate-input :errors="errors?.errors" value="company"></validate-input>
                   </div>
                 </div>
 
                 <div class="col-sm-6 col-md-4">
                   <div class="mb-3">
                     <label class="form-label">Email address</label>
-                    <input class="form-control" type="email"  v-model="user.email"  placeholder="Email">
+                    <!-- <input class="form-control" type="email"  v-model="user.email"  placeholder="Email"> -->
+                    <input :class="`form-control ${this.$root.appendValidateClass(errors?.errors, 'email')}`"  type="email" v-model="user.email" placeholder="Email">
+                    <validate-input :errors="errors?.errors" value="email"></validate-input>
                   </div>
                 </div>
                 <div class="col-sm-6 col-md-4">
                     <div class="mb-3">
                       <label class="form-label">Role</label>
                       <input class="form-control" type="email"  v-model="user.role"  placeholder="Role">
+
+                      <validate-input :errors="errors?.errors" value="roles"></validate-input>
                     </div>
                   </div>
 
                 <div class="col-md-12">
                   <div class="mb-3">
                     <label class="form-label">Address</label>
-                    <input class="form-control" type="text"  v-model="user.address"  placeholder="Home Address">
+                    <!-- <input class="form-control" type="text"  v-model="user.address"  placeholder="Home Address"> -->
+                    <input :class="`form-control ${this.$root.appendValidateClass(errors?.errors, 'address')}`"  type="email" v-model="user.address" placeholder="Home Address">
+                    <validate-input :errors="errors?.errors" value="address"></validate-input>
                   </div>
                 </div>
                 <div class="col-sm-6 col-md-4">
                   <div class="mb-3">
                     <label class="form-label">City</label>
-                    <input class="form-control"  v-model="user.city"  type="text" placeholder="City">
+                    <input :class="`form-control ${this.$root.appendValidateClass(errors?.errors, 'city')}`"  type="text" v-model="user.city" placeholder="City">
+                    <validate-input :errors="errors?.errors" value="city"></validate-input>
                   </div>
                 </div>
                 <div class="col-sm-6 col-md-3">
                   <div class="mb-3">
                     <label class="form-label">Postal Code</label>
-                    <input class="form-control" type="number" v-model="user.postal_code" placeholder="ZIP Code">
+                    <!-- <input class="form-control" type="number" v-model="user.postal_code" placeholder="ZIP Code"> -->
+                    <input :class="`form-control ${this.$root.appendValidateClass(errors?.errors, 'postal_code')}`"  type="text" v-model="user.postal_code" placeholder="ZIP Code">
+                    <validate-input :errors="errors?.errors" value="postal_code"></validate-input>
                   </div>
                 </div>
                 <div class="col-md-5">
@@ -122,12 +137,14 @@ export default {
 props:['form','edit'],
 data:()=>({
     user:{},
+    errors:[],
 }),
 
 methods:{
 
     restForm(){
             this.user={};
+
     },
    async  onSubmit(){
             if(!this.edit_mode){

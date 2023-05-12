@@ -13,6 +13,7 @@ import router from "./router";
 // import 'floating-vue/dist/style.css';
 import Breadcrumb from "./vue/backend/pages/components/BreadcrumbComponent.vue";
 import SearchInput from "./vue/backend/pages/components/SerachInputComponent.vue";
+import ValidateInput  from "./vue/backend/pages/components/ValidateInputComponent.vue";
 
 
 
@@ -41,4 +42,5 @@ app.config.globalProperties.$filters = {
 
 app.component('Breadcrumb', Breadcrumb);
 app.component('SearchInput',SearchInput)
+app.component("ValidateInput",ValidateInput);
 app.use(router).mount("#app");
