@@ -132,7 +132,7 @@ methods:{
    async  onSubmit(){
             if(!this.edit_mode){
                await axios.post('/user', this.user).then((res)=>{
-                this.$router.push("/portal/users" );
+                this.$router.push("/pusers" );
                 this.$root.alertNotify(res.status,'Created successfully','success',res.data);
                 this.restForm();
                 }).catch((err)=>{
@@ -142,7 +142,7 @@ methods:{
                 })
             } else{
               await axios.put('/user/' + this.form.id, this.user).then((res)=>{
-                this.$router.push("/portal/users" );
+                this.$router.push("/users" );
                   this.$root.alertNotify(res.status,'Updated successfully','success',res.data);
                 //   this.restForm();
               }).catch((err)=>{

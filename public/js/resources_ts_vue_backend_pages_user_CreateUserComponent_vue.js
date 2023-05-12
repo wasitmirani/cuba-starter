@@ -66,7 +66,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               }
               _context.next = 3;
               return axios.post('/user', _this.user).then(function (res) {
-                _this.$router.push("/portal/users");
+                _this.$router.push("/pusers");
                 _this.$root.alertNotify(res.status, 'Created successfully', 'success', res.data);
                 _this.restForm();
               })["catch"](function (err) {
@@ -79,7 +79,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             case 5:
               _context.next = 7;
               return axios.put('/user/' + _this.form.id, _this.user).then(function (res) {
-                _this.$router.push("/portal/users");
+                _this.$router.push("/users");
                 _this.$root.alertNotify(res.status, 'Updated successfully', 'success', res.data);
                 //   this.restForm();
               })["catch"](function (err) {
