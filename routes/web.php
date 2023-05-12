@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\backend\BackendController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,12 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
+Route::get('redirect/{driver}',[LoginController::class, 'redirectToProvider'])
+    ->name('login.provider')
+    ->where('driver', implode('|', config('auth.socialite.drivers')));
+Route::get('{driver}/callback', [LoginController::class, 'handleProviderCallback'])
+    ->name('login.callback')
+    ->where('driver', implode('|', config('auth.socialite.drivers')));
 
 Route::get('/{any}',[BackendController::class,'index'])->middleware(['auth', 'verified']);
 
