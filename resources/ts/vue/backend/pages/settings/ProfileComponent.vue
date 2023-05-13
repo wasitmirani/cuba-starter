@@ -1,6 +1,6 @@
 <template>
   <div>
-    <breadcrumb active_name="App Settings"></breadcrumb>
+    <Breadcrumb active_name="App Settings"></Breadcrumb>
     <div class="container-fluid">
       <div class="card">
         <div class="card-body">

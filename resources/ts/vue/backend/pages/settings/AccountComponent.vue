@@ -1,6 +1,6 @@
 <template>
     <div>
-      <breadcrumb active_name="Account"></breadcrumb>
+      <Breadcrumb active_name="Account"></Breadcrumb>
       <div class="container-fluid">
         <div class="card">
           <div class="card-body">
@@ -160,7 +160,7 @@
                       <h4>Email Settings</h4>
                       <p>For user email settings</p>
                     </div>
-  
+
                   </div>
                   <div class="card-body">
                     <div class="row">
@@ -228,7 +228,7 @@
                       <h4>Password Settings</h4>
                       <p>For user password settings</p>
                     </div>
-  
+
                   </div>
                   <div class="card-body">
                     <div class="row">
@@ -309,12 +309,12 @@
       </div>
     </div>
   </template>
-    
+
     <script>
   // import breadcrumb from "../../components/breadcrumbComponent.vue";
   import UploadMedia from "vue-media-upload";
   import Breadcrumb from "../components/BreadcrumbComponent.vue";
-  
+
   export default {
     components: { UploadMedia, Breadcrumb },
     data() {
@@ -328,7 +328,7 @@
         countries: [],
       };
     },
-  
+
     methods: {
       Media(value) {
         if (this.media.length > 1) {
@@ -362,7 +362,7 @@
             );
           });
       },
-  
+
       getAppSettings() {
         this.loading = true;
         axios.get("user-settings").then((res) => {
@@ -376,7 +376,7 @@
     },
   };
   </script>
-    
+
     <style>
   .image-container .images-preview {
     height: 100px !important;

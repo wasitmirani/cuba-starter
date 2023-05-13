@@ -14,10 +14,13 @@ const mix = require('laravel-mix');
 
 //  mix.css('resources/css/master.css', 'public/css/master.css')
 
- mix.ts('resources/ts/app.ts', 'public/js').vue();
+//  mix.ts('resources/ts/app.ts', 'public/js').vue();
 
 
-
+ mix.ts('resources/ts/app.ts', 'public/js').vue()
+ .postCss('resources/css/app.css', 'public/css', [
+     //
+ ]);
 
 mix.options({
     hmrOptions: {

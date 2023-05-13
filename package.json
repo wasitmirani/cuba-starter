@@ -29,6 +29,7 @@
     "dependencies": {
         "@kyvg/vue3-notification": "^2.3.6",
         "cross-env": "^7.0.3",
+        "laravel-vue-pagination": "^4.1.0",
         "ts-loader": "^9.3.0",
         "typescript": "^4.6.4",
         "vue": "^3.2.36",
@@ -36,6 +37,7 @@
         "vue-lodash": "^2.1.2",
         "vue-media-upload": "^2.1.2",
         "vue-router": "^4.0.15",
-        "vue3-colorpicker": "^2.0.4"
+        "vue3-colorpicker": "^2.0.4",
+        "vuedraggable": "^2.24.3"
     }
 }
