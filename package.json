@@ -27,7 +27,7 @@
         "vue-loader": "^17.0.0"
     },
     "dependencies": {
-        "@kyvg/vue3-notification": "^2.3.6",
+        "@kyvg/vue3-notification": "^2.9.0",
         "cross-env": "^7.0.3",
         "laravel-vue-pagination": "^4.1.0",
         "ts-loader": "^9.3.0",

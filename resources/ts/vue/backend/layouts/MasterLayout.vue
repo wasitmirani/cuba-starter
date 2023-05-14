@@ -10,11 +10,11 @@
         <sidebar-component></sidebar-component>
       <!-- Page Sidebar Ends-->
       <div class="page-body">
-
-
+    <!-- position="top right" -->
+        <notifications   class="mt-1 mr-1 " />
             <router-view></router-view>
 
-      
+
         <!-- Container-fluid Ends-->
       </div>
       <!-- footer start-->
@@ -34,6 +34,9 @@ import FooterComponent from "./components/FooterComponent.vue"
   }
 
 </script>
-<style lang="">
-
-</style>
+<!-- <style >
+.custom-notify{
+width: 100% !important;
+height: 100% !important;
+}
+</style> -->

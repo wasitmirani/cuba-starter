@@ -29,37 +29,37 @@
             break;
         }
       },
-    //   alertNotify(status, title, type, response) {
-    //     switch (status) {
-    //       case 200:
-    //         this.$notify({ title: title, type: type, text: response.message });
-    //         break;
-    //       case 201:
-    //         this.$notify({ title: title, type: type, text: response.message });
-    //         break;
-    //       case 422:
-    //         this.$notify({
-    //           title: `Oops, Unprocessable Entity ${status} Error! `,
-    //           type: type,
-    //           text: response.message,
-    //         });
-    //         break;
-    //       case 404:
-    //         this.$notify({
-    //           title: `Oops, Not Found ${status} Error! `,
-    //           type: type,
-    //           text: response.message,
-    //         });
-    //         break;
-    //       case 500:
-    //         this.$notify({
-    //           title: `Oops, Something Went Wrong ${status} Error! `,
-    //           type: type,
-    //           text: response.message,
-    //         });
-    //         break;
-    //     }
-    //   },
+      alertNotify(status, title, type, response) {
+        switch (status) {
+          case 200:
+            this.$notify({ title: title, type: type, text: response.message });
+            break;
+          case 201:
+            this.$notify({ title: title, type: type, text: response.message });
+            break;
+          case 422:
+            this.$notify({
+              title: `Oops, Unprocessable Entity ${status} Error! `,
+              type: type,
+              text: response.message,
+            });
+            break;
+          case 404:
+            this.$notify({
+              title: `Oops, Not Found ${status} Error! `,
+              type: type,
+              text: response.message,
+            });
+            break;
+          case 500:
+            this.$notify({
+              title: `Oops, Something Went Wrong ${status} Error! `,
+              type: type,
+              text: response.message,
+            });
+            break;
+        }
+      },
     },
     mounted() {},
   };

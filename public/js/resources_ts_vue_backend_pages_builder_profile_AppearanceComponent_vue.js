@@ -865,7 +865,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.active[data-v-96de5350]{\r\n    font-weight: bold;\r\n   box-shadow: 0 0 10px 2px var(--theme-deafult);\r\n\r\n   border-radius: 20px;\n}\n.active-bg[data-v-96de5350] {\r\n   font-weight: bold;\r\n   background-color: transparent;\r\n   box-shadow: 0 0 10px 2px var(--theme-deafult);\r\n   color:var(--theme-secondary);\r\n   border-radius: 20px;\n}\nlabel input[ type=\"file\" ][data-v-96de5350] {\r\n  display: none;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.active[data-v-96de5350]{\n    font-weight: bold;\n   box-shadow: 0 0 10px 2px var(--theme-deafult);\n\n   border-radius: 20px;\n}\n.active-bg[data-v-96de5350] {\n   font-weight: bold;\n   background-color: transparent;\n   box-shadow: 0 0 10px 2px var(--theme-deafult);\n   color:var(--theme-secondary);\n   border-radius: 20px;\n}\nlabel input[ type=\"file\" ][data-v-96de5350] {\n  display: none;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

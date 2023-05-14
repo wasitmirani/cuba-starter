@@ -5,10 +5,10 @@
                               </div>
          <div class="card-body megaoptions-border-space-sm">
                                  <form class="mega-inline" enctype="multipart/form-data">
-                                   
+
                                        <div class="col-sm-6">
                                         <div class="userpro-box">
-                                                   <div class="img-wrraper">                              
+                                                   <div class="img-wrraper">
                                                    <div class="avatar">
                                                          <img class="img-fluid" v-if="this.user.thumbnail === 'default.png'" alt="" :src="this.host_url + '/assets/images/user/user.png'">
                                                          <img class="img-fluid" v-else :src="this.host_url + '/img/user/' + this.user.thumbnail ">
@@ -17,14 +17,14 @@
                                                       <label for="myInputFile">
                                                          <i class="icofont icofont-pencil-alt-5"  for="myInputFile">
                                                                <input type="file" id="myInputFile" @change="uploadImage" name="myInputFile"/>
-                                                                
-                                                         
+
+
                                                          </i>
                                                           </label>
-                                                          
+
                                                       </a>
                                                    </div>
-                                                
+
                                                 </div>
                                        </div>
                                        <div class="col-sm-6">
@@ -36,7 +36,7 @@
                                              <h6 class="form-label">Bio</h6>
                                              <textarea v-model="this.user.bio" class="form-control" rows="5">{{this.user.bio}}</textarea>
                                              </div>
-                                 
+
                                     </div>
                                  </form>
                               </div>
@@ -228,8 +228,8 @@ export default {
              secondary:"#96e6a1",
          },
          active_card:'',
-         host_url:window.location.origin,   
-        
+         host_url:window.location.origin,
+
     }
     },
     created(){
@@ -240,7 +240,7 @@ export default {
             const formData = new FormData();
             formData.append("thumbnail", e.target.files[0]);
             formData.append("id", this.user.id);
-       
+
             this.onSubmit(formData)
       },
          async onSubmit(data){

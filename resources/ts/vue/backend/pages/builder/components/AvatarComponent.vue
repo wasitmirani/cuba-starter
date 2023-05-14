@@ -2,9 +2,7 @@
    <div>
       <div class="col-sm-12">
          <div class="card">
-            <!-- <div class="card-header pb-0">
-               <h5>Default Form Layout</h5><span>Using the <a href="#">card</a> component, you can extend the default collapse behavior to create an accordion.</span>
-               </div> -->
+
             <div class="card-body">
                <form class="theme-form"  v-on:submit.prevent="onSubmit">
                   <div class="mb-1">

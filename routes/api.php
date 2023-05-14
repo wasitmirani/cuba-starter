@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\backend\api\DashboardController;
 use App\Http\Controllers\backend\api\user\UserController;
 use App\Http\Controllers\backend\api\layout\LayoutController;
+use App\Http\Controllers\backend\api\link\ShortLinkController;
 use App\Http\Controllers\backend\api\layout\SettingsController;
 
 /*
@@ -24,11 +25,17 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::middleware('auth:sanctum')->group(function () {
-Route::prefix('config')->group(function () {
-    Route::get('/sidebar-menu',[LayoutController::class,'getSideBarMenu']);
-    Route::post('update-app-settings',[SettingsController::class,'updateSettings']);
-    Route::get('settings',[SettingsController::class,'getSettings']);
-});
+
+    Route::prefix('config')->group(function () {
+            Route::get('/sidebar-menu',[LayoutController::class,'getSideBarMenu']);
+            Route::post('update-app-settings',[SettingsController::class,'updateSettings']);
+            Route::get('settings',[SettingsController::class,'getSettings']);
+    });
+
+    // Short Link Generate Routes
+    Route::post('short-link', [ShortLinkController::class,'createShortLink']);
+    Route::post('/short-link/update',[ShortLinkController::class,'updateProfile']);
+    Route::get('/short-link-profile', [ShortLinkController::class,'getLinkProfile']);
 
    //APP SETTINGS ROUTES
    Route::get('/app-settings',[DashboardController::class,'getAppSettings']);

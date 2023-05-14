@@ -1,8 +1,14 @@
 <template>
    <div>
    <ul>
-
-      <div class="element-container">
+      <!-- <li class="item" v-if="loading">
+         <div class="col-sm-12 col-md-12" >
+            <div class="loader-box">
+               <div class="loader-19"></div>
+            </div>
+         </div>
+      </li> -->
+      <div class="element-container" v-if="items">
          <draggable animation="400" v-model="items" @start="drag = true" @end="drag = false" item-key="id"  handle=".handle">
             <template #item="{ element }">
                <li class="item" @dragstart="dragStartHandler" @dragend="dragEndHandler" @drag="dragHandler">
@@ -99,8 +105,8 @@
     data(){
         return {
              drag: true,
-             items:[],
              dragPreview: null,
+             items:[],
              x: 0,
              y: 0,
         }

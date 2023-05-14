@@ -36,6 +36,8 @@ const routes = [
     setRoute("/profile-settings","profile-settings","settings/Profile",'profile-read'),
     setRoute("/account-settings","account-settings","settings/Account",'account-view'),
     setRoute("/bio-links","bio-links","builder/link/Links",'bio-links-view'),
+    setRoute("/profile-builder","profile-builder","builder/profile/profileBuilder",'profile-builder-view'),
+
 
 
 

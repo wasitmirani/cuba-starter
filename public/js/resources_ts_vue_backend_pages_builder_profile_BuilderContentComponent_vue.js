@@ -188,8 +188,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       drag: true,
-      items: [],
       dragPreview: null,
+      items: [],
       x: 0,
       y: 0
     };
@@ -581,6 +581,7 @@ var _withScopeId = function _withScopeId(n) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-66e3351e"), n = n(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)(), n;
 };
 var _hoisted_1 = {
+  key: 0,
   "class": "element-container"
 };
 var _hoisted_2 = {
@@ -707,7 +708,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_image_view = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("image-view");
   var _component_social_view = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("social-view");
   var _component_draggable = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("draggable");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_draggable, {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <li class=\"item\" v-if=\"loading\">\n         <div class=\"col-sm-12 col-md-12\" >\n            <div class=\"loader-box\">\n               <div class=\"loader-19\"></div>\n            </div>\n         </div>\n      </li> "), $data.items ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_draggable, {
     animation: "400",
     modelValue: $data.items,
     "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
@@ -762,7 +763,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }),
 
     _: 1 /* STABLE */
-  }, 8 /* PROPS */, ["modelValue"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, 8 /* PROPS */, ["modelValue"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "drag-preview",
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)(_ctx.dragStyle),
     ref: "dragPreview"

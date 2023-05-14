@@ -106,7 +106,7 @@
                  <div class="text-danger" v-if="this.errors.message.length>0">{{this.errors.message}}</div>
               </div>
               <div class="row">
-                <button class="btn btn-dark rounded-pill w-100 mt-2" >Connect new link</button>
+                <button  @click="onSubmit" type="button" class="btn btn-dark rounded-pill w-100 mt-2" >Connect new link</button>
                 <button class="btn rounded-pill w-100 pb-0 dark-toggle-btn" type="button" data-bs-dismiss="modal" data-bs-original-title="" title="">Cancel</button>
               </div>
 
@@ -159,7 +159,7 @@ export default {
             ),
         onSubmit(){
            if(!this.validation){
-             axios.post('/create-short-link',this.link).then((res)=>{
+             axios.post('/short-link',this.link).then((res)=>{
               let data=res.data.link;
                $('#modalCenter').modal('hide');
                  this.$notify({

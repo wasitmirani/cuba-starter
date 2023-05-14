@@ -15,8 +15,10 @@
                 </div>
             </form>
             <div class="header-logo-wrapper col-auto p-0">
-                <div class="logo-wrapper"><router-view to="/"><img class="img-fluid" src="assets/images/logo/logo.png"
-                            alt=""></router-view></div>
+                <div class="logo-wrapper"><router-link to="/">
+                <img class="img-fluid" src="assets/images/logo/logo.png"
+                            alt=""></router-link>
+                            </div>
                 <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i>
                 </div>
             </div>

@@ -205,7 +205,7 @@
    import Appearance from "./AppearanceComponent.vue";
    export default {
      components: { Quote,Themes,Appearance,VideoComponent,LinkComponent,TextComponent, HeadingComponent, ImageComponent,
-                   SocialComponent, AvatarComponent, DividerComponent,PhoneComponent,BuilderContent,PhoneElementsComponent,
+                   SocialComponent, AvatarComponent, DividerComponent,PhoneComponent,PhoneElementsComponent,
                    HtmlComponent, LocationComponent, SpotifyComponent, QuestionComponent, YoutubeComponent, MailComponent, PaypalComponent,
                     Settings, SoundcloudComponent
                 },
@@ -250,7 +250,7 @@
          },
          query:"",
          items:{},
-         user:this.$auth_user,
+         user:{},
        };
      },
 
@@ -571,6 +571,8 @@
     //  },
 
      mounted() {
+    this.user=user;
+     console.log("Test0003");
         this.getQuery();
         this.getRandomColors();
         // this.loadProfileData();

@@ -1211,8 +1211,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       drag: true,
-      items: [],
       dragPreview: null,
+      items: [],
       x: 0,
       y: 0
     };
@@ -1314,6 +1314,9 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
   data: function data() {
     return {
       styles: {},
+      items: [],
+      appearance: [],
+      branding: [],
       user: this.$auth_user
     };
   },
@@ -1567,7 +1570,6 @@ var __default__ = {
     AvatarComponent: _components_AvatarComponent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
     DividerComponent: _components_DividerComponent_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
     PhoneComponent: _components_PhoneComponent_vue__WEBPACK_IMPORTED_MODULE_19__["default"],
-    BuilderContent: _BuilderContentComponent_vue__WEBPACK_IMPORTED_MODULE_23__["default"],
     PhoneElementsComponent: _PhoneElementsComponent_vue__WEBPACK_IMPORTED_MODULE_22__["default"],
     HtmlComponent: _components_HTMLComponent_vue__WEBPACK_IMPORTED_MODULE_13__["default"],
     LocationComponent: _components_LocationComponent_vue__WEBPACK_IMPORTED_MODULE_14__["default"],
@@ -1620,7 +1622,7 @@ var __default__ = {
       },
       query: "",
       items: {},
-      user: this.$auth_user
+      user: {}
     };
   },
   computed: {
@@ -1978,6 +1980,8 @@ var __default__ = {
   //      this.getQuery();
   //  },
   mounted: function mounted() {
+    this.user = user;
+    console.log("Test0003");
     this.getQuery();
     this.getRandomColors();
     // this.loadProfileData();
@@ -2158,7 +2162,7 @@ var _hoisted_19 = /*#__PURE__*/_withScopeId(function () {
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_image_view = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("image-view");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"card-header pb-0\">\r\n               <h5>Default Form Layout</h5><span>Using the <a href=\"#\">card</a> component, you can extend the default collapse behavior to create an accordion.</span>\r\n               </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     "class": "theme-form",
     onSubmit: _cache[4] || (_cache[4] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $options.onSubmit && $options.onSubmit.apply($options, arguments);
@@ -5095,6 +5099,7 @@ var _withScopeId = function _withScopeId(n) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-66e3351e"), n = n(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)(), n;
 };
 var _hoisted_1 = {
+  key: 0,
   "class": "element-container"
 };
 var _hoisted_2 = {
@@ -5221,7 +5226,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_image_view = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("image-view");
   var _component_social_view = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("social-view");
   var _component_draggable = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("draggable");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_draggable, {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <li class=\"item\" v-if=\"loading\">\n         <div class=\"col-sm-12 col-md-12\" >\n            <div class=\"loader-box\">\n               <div class=\"loader-19\"></div>\n            </div>\n         </div>\n      </li> "), $data.items ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_draggable, {
     animation: "400",
     modelValue: $data.items,
     "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
@@ -5276,7 +5281,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }),
 
     _: 1 /* STABLE */
-  }, 8 /* PROPS */, ["modelValue"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, 8 /* PROPS */, ["modelValue"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "drag-preview",
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)(_ctx.dragStyle),
     ref: "dragPreview"
@@ -5344,7 +5349,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_account_component, {
     account: $data.user,
     "class": "component-margin"
-  }, null, 8 /* PROPS */, ["account"]), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.items, function (item) {
+  }, null, 8 /* PROPS */, ["account"]), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.items, function (item) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       key: item.id,
       state: $options.appearanceStyle
@@ -6522,7 +6527,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\ninput#file[data-v-269c5c36] {\r\n   display: inline-block;\r\n   width: 100%;\r\n   padding: 120px 0 0 0;\r\n   height: 100px;\r\n   overflow: hidden;\r\n   box-sizing: border-box;\r\n   background: url(\"https://cdn1.iconfinder.com/data/icons/hawcons/32/698394-icon-130-cloud-upload-512.png\")\r\n   center center no-repeat #e4e4e4;\r\n   border-radius: 20px;\r\n   background-size: 60px 60px;\r\n   border: 2px dashed #4049ff;\n}\n.square img[data-v-269c5c36] {\r\n   width: 100%;\r\n   padding: 16px;\r\n   border-radius: 20px;\n}\r\n\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\ninput#file[data-v-269c5c36] {\n   display: inline-block;\n   width: 100%;\n   padding: 120px 0 0 0;\n   height: 100px;\n   overflow: hidden;\n   box-sizing: border-box;\n   background: url(\"https://cdn1.iconfinder.com/data/icons/hawcons/32/698394-icon-130-cloud-upload-512.png\")\n   center center no-repeat #e4e4e4;\n   border-radius: 20px;\n   background-size: 60px 60px;\n   border: 2px dashed #4049ff;\n}\n.square img[data-v-269c5c36] {\n   width: 100%;\n   padding: 16px;\n   border-radius: 20px;\n}\n\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6642,7 +6647,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.active[data-v-96de5350]{\r\n    font-weight: bold;\r\n   box-shadow: 0 0 10px 2px var(--theme-deafult);\r\n\r\n   border-radius: 20px;\n}\n.active-bg[data-v-96de5350] {\r\n   font-weight: bold;\r\n   background-color: transparent;\r\n   box-shadow: 0 0 10px 2px var(--theme-deafult);\r\n   color:var(--theme-secondary);\r\n   border-radius: 20px;\n}\nlabel input[ type=\"file\" ][data-v-96de5350] {\r\n  display: none;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.active[data-v-96de5350]{\n    font-weight: bold;\n   box-shadow: 0 0 10px 2px var(--theme-deafult);\n\n   border-radius: 20px;\n}\n.active-bg[data-v-96de5350] {\n   font-weight: bold;\n   background-color: transparent;\n   box-shadow: 0 0 10px 2px var(--theme-deafult);\n   color:var(--theme-secondary);\n   border-radius: 20px;\n}\nlabel input[ type=\"file\" ][data-v-96de5350] {\n  display: none;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

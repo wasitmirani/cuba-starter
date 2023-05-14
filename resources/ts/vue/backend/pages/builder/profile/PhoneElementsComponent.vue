@@ -2,7 +2,7 @@
    <div :style="returnStyle" >
     <account-component :account="user" class="component-margin"></account-component>
       <div v-for="item in items" :key="item.id" :state="appearanceStyle" >
-        
+
          <h1  v-if="item.element_type=='heading'" >
             {{item.value}}
          </h1>
@@ -56,6 +56,9 @@ export default {
      data(){
          return {
              styles:{},
+             items:[],
+             appearance:[],
+             branding:[],
              user:this.$auth_user,
          }
      },
