@@ -38,7 +38,7 @@ return new class extends Migration
             $table->string('referrer_domain')->nullable();
             $table->string('referrer_path')->nullable();
             $table->integer('clicks')->unsigned()->default(0);
-            $table->integer('vistor')->unsigned()->default(0);
+            $table->integer('visitor')->unsigned()->default(0);
             $table->softDeletes();
             $table->timestamps();
         });

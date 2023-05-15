@@ -17,7 +17,7 @@ class ShortLinkController extends Controller
         $links=ShortLink::latest()
         ->where('user_id',$request->user()->id)
         ->where('name', 'like', '%' . $q . '%')
-        ->withSum('visitors as total_visitors', 'total_visitors')
+        ->withSum('visitors as total_visitors', 'visitor')
         ->withSum('visitors as total_clicks', 'clicks')
         ->paginate((int)$per_page);
        return response()->json(['success' =>true,'links'=>$links],200);
