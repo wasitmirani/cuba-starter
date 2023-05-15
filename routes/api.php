@@ -7,6 +7,7 @@ use App\Http\Controllers\backend\api\user\UserController;
 use App\Http\Controllers\backend\api\layout\LayoutController;
 use App\Http\Controllers\backend\api\link\ShortLinkController;
 use App\Http\Controllers\backend\api\layout\SettingsController;
+use App\Http\Controllers\backend\api\news\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,5 +45,6 @@ Route::middleware('auth:sanctum')->group(function () {
    Route::post('/user-settings',[DashboardController::class,'UpdateUserSettings']);
    Route::post('app-thumbnail-upload',[DashboardController::class,'uploadAppThumbnail']);
    Route::resource('user', UserController::class);
+   Route::resource('news', NewsController::class);
 
 });

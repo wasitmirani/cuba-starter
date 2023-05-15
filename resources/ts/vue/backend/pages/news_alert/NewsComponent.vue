@@ -64,8 +64,8 @@ data () {
   methods:{
         getNews(){
             this.loading=true;
-            axios.get('/user').then((res)=>{
-                this.news=res.data.users;
+            axios.get('/news').then((res)=>{
+                this.news=res.data.news;
             }).catch((err)=>{
                 
             });

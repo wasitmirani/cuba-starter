@@ -34,6 +34,7 @@ const routes = [
     setRoute("/users","users","user/Users",'user-read'),
     setRoute("/news-alerts","news-alerts","news_alert/News",'news-alert-read'),
     setRoute("/news-alert-create","news-alert-create","news_alert/CreateNews",'news-alert-create'),
+    setRoute("/news-alert-edit/:uid","news-alert-edit","news_alert/EditNews",'news-alert-edit'),
     setRoute("/user-create","user-create","user/CreateUser",'user-create'),
     setRoute("/profile-settings","profile-settings","settings/Profile",'profile-read'),
     setRoute("/account-settings","account-settings","settings/Account",'account-view'),
