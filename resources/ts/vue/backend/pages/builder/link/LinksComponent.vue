@@ -50,38 +50,12 @@
                             </div>
                         </div>
                   </div>
-                    <user-table :users="users"></user-table>
+                    <link-table :links="links"></link-table>
+
                 </div>
               </div>
         </div>
-             <!-- <div class="modal fade" id="modalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter" aria-hidden="true">
-                      <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title">Create biolink page</h5>
-                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
 
-                             <div class="mb-3  ">
-                            <label class="form-label"><i class="icofont icofont-link-alt "></i>  Biolink URL</label>
-                            <div class="input-group pill-input-group"><span class="input-group-text ">
-                               {{this.url}}
-                             </span>
-                              <input  :state="validation" :class="`form-control input-group-air ${validation ? 'is-invalid' : ''} ${this.errors.message.length>0 ? 'is-invalid' : ''} `"  v-model="link.short_link" type="text" placeholder="your-custom-alias">
-
-                            </div>
-                            <div class="text-danger" v-if="validation">Your custom alias  must be 4-100 characters long.</div>
-                             <div class="text-danger" v-if="this.errors.message.length>0">{{this.errors.message}}</div>
-                          </div>
-                          </div>
-                          <div class="modal-footer">
-
-                            <button class="btn btn-pill btn-primary btn-air-primary" @click="onSubmit" type="button">Submit</button>
-                          </div>
-                        </div>
-                      </div>
-            </div> -->
   </div>
 
 
@@ -120,12 +94,13 @@
 <script>
 
 import { Bootstrap5Pagination } from 'laravel-vue-pagination';
+import LinkTable from "./LinkTable.vue";
 
 import TableFooter from "./TableFooter.vue";
 // import LoaderBox from "../../../components/loaderboxComponent.vue";
 // LoaderBox
 export default {
-    components: {'Pagination': Bootstrap5Pagination,TableFooter},
+    components: {'Pagination': Bootstrap5Pagination,TableFooter,LinkTable},
     data(){
         return{
             links: [],

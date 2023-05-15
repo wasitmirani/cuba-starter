@@ -11,6 +11,17 @@ class ShortLinkController extends Controller
 {
     //
 
+    public function index(Request $request){
+        $per_page=!empty(env('PER_PAGE')) ? env('PER_PAGE') : 10;
+        $q=!empty(request('query')) ? request('query') : '';
+        $links=ShortLink::latest()
+        ->where('user_id',$request->user()->id)
+        ->where('name', 'like', '%' . $q . '%')
+        ->withSum('visitors as total_visitors', 'visitor')
+        ->withSum('visitors as total_clicks', 'clicks')
+        ->paginate((int)$per_page);
+       return response()->json(['success' =>true,'links'=>$links],200);
+    }
     public function createShortLink(Request $request){
         $this->validate($request, [
             'short_link' => 'required',
