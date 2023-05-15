@@ -47,7 +47,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     width: "100%",
     height: $data.height,
     src: $props.youtube.value
-  }, "\r\n", 8 /* PROPS */, _hoisted_1)]);
+  }, "\n", 8 /* PROPS */, _hoisted_1)]);
 }
 
 /***/ }),
@@ -64,13 +64,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _YoutubeViewComponent_vue_vue_type_template_id_39ccd1d3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./YoutubeViewComponent.vue?vue&type=template&id=39ccd1d3 */ "./resources/ts/vue/backend/pages/builder/components/YoutubeViewComponent.vue?vue&type=template&id=39ccd1d3");
 /* harmony import */ var _YoutubeViewComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./YoutubeViewComponent.vue?vue&type=script&lang=js */ "./resources/ts/vue/backend/pages/builder/components/YoutubeViewComponent.vue?vue&type=script&lang=js");
-/* harmony import */ var C_laragon_www_lara10starter_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_laragon_www_cuba_admin_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_lara10starter_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_YoutubeViewComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_YoutubeViewComponent_vue_vue_type_template_id_39ccd1d3__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/ts/vue/backend/pages/builder/components/YoutubeViewComponent.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_laragon_www_cuba_admin_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_YoutubeViewComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_YoutubeViewComponent_vue_vue_type_template_id_39ccd1d3__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/ts/vue/backend/pages/builder/components/YoutubeViewComponent.vue"]])
 /* hot reload */
 if (false) {}
 
