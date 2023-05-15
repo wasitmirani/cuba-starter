@@ -32,6 +32,7 @@ Route::middleware('auth:sanctum')->group(function () {
             Route::get('settings',[SettingsController::class,'getSettings']);
     });
 
+    Route::resource('short-link', ShortLinkController::class);
     // Short Link Generate Routes
     Route::post('short-link', [ShortLinkController::class,'createShortLink']);
     Route::post('/short-link/update',[ShortLinkController::class,'updateProfile']);
