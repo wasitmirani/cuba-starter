@@ -1,7 +1,7 @@
 <template >
     <div class="sidebar-wrapper" sidebar-layout="stroke-svg">
         <div>
-          <div class="logo-wrapper"><a href="index.html"><img class="img-fluid for-light" src="assets/images/logo/logo.png" alt=""><img class="img-fluid for-dark" src="assets/images/logo/logo_dark.png" alt=""></a>
+          <div class="logo-wrapper"><router-link :to="'/'"><img class="img-fluid for-light" src="assets/images/logo/logo.png" alt=""><img class="img-fluid for-dark" src="assets/images/logo/logo_dark.png" alt=""></router-link>
             <div class="back-btn"><i class="fa fa-angle-left"></i></div>
             <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i></div>
           </div>
@@ -16,7 +16,7 @@
 
 
 
-                <li  v-for="(item,index) in sidebar_menu" :key="item.id" :class="getClass(item)" >
+                <li  v-for="(item) in sidebar_menu" :key="item.id" :class="getClass(item)" >
 
                         <div v-if="item?.heading && isAllowed(item?.heading_can)">
                         <h6 >

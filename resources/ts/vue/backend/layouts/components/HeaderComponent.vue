@@ -22,7 +22,7 @@
                 <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i>
                 </div>
             </div>
-            <div class="left-header col-xxl-5 col-xl-6 col-lg-5 col-md-4 col-sm-3 p-0">
+            <!-- <div class="left-header col-xxl-5 col-xl-6 col-lg-5 col-md-4 col-sm-3 p-0">
                 <div class="notification-slider">
                     <div class="d-flex h-100"> <img src="assets/images/giftools.gif" alt="gif">
                         <h6 class="mb-0 f-w-400"><span class="font-primary">Don't Miss Out! </span><span class="f-light">Out
@@ -30,7 +30,7 @@
                     </div>
 
                 </div>
-            </div>
+            </div> -->
             <!-- Language -->
             <div class="nav-right col-xxl-7 col-xl-6 col-md-7 col-8 pull-right right-header p-0 ms-auto">
                 <ul class="nav-menus">
@@ -64,57 +64,6 @@
                                 <use href="assets/svg/icon-sprite.svg#search"></use>
                             </svg>
                      </span></li>
-                    <!-- <li class="onhover-dropdown">
-                        <svg>
-                            <use href="assets/svg/icon-sprite.svg#star"></use>
-                        </svg>
-                        <div class="onhover-show-div bookmark-flip">
-                            <div class="flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="front">
-                                        <h6 class="f-18 mb-0 dropdown-title">Bookmark</h6>
-                                        <ul class="bookmark-dropdown">
-                                            <li>
-                                                <div class="row">
-                                                    <div class="col-4 text-center">
-                                                        <div class="bookmark-content">
-                                                            <div class="bookmark-icon"><i data-feather="file-text"></i>
-                                                            </div><span>Forms</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-4 text-center">
-                                                        <div class="bookmark-content">
-                                                            <div class="bookmark-icon"><i data-feather="user"></i></div>
-                                                            <span>Profile</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-4 text-center">
-                                                        <div class="bookmark-content">
-                                                            <div class="bookmark-icon"><i data-feather="server"></i></div>
-                                                            <span>Tables</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="text-center"><a class="flip-btn f-w-700" id="flip-btn"
-                                                    href="javascript:void(0)">Add New Bookmark</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="back">
-                                        <ul>
-                                            <li>
-                                                <div class="bookmark-dropdown flip-back-content">
-                                                    <input type="text" placeholder="search...">
-                                                </div>
-                                            </li>
-                                            <li><a class="f-w-700 d-block flip-back" id="flip-back"
-                                                    href="javascript:void(0)">Back</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li> -->
                     <li>
                         <div class="mode">
                             <svg>
@@ -208,16 +157,16 @@
                     <li class="profile-nav onhover-dropdown pe-0 py-0">
                         <div class="media profile-media"><img class="b-r-10" src="assets/images/dashboard/profile.png"
                                 alt="">
-                            <div class="media-body"><span>Emay Walter</span>
-                                <p class="mb-0 font-roboto">Admin <i class="middle fa fa-angle-down"></i></p>
+                            <div class="media-body"><span>{{ this.user.name }}</span>
+                                <p class="mb-0 font-roboto">{{ this.user.email }} <i class="middle fa fa-angle-down"></i></p>
                             </div>
                         </div>
                         <ul class="profile-dropdown onhover-show-div">
-                        <li><a href="#"><i data-feather="user"></i><span>Account </span></a></li>
-                        <li><a href="#"><i data-feather="mail"></i><span>Inbox</span></a></li>
-                        <li><a href="#"><i data-feather="file-text"></i><span>Taskboard</span></a></li>
+                        <li><router-link to="account-settings"><i data-feather="user"></i><span>Account </span></router-link></li>
+                        <!-- <li><a href="#"><i data-feather="mail"></i><span>Inbox</span></a></li> -->
+                        <!-- <li><a href="#"><i data-feather="file-text"></i><span>Taskboard</span></a></li> -->
                         <li><a href="#"><i data-feather="settings"></i><span>Settings</span></a></li>
-                        <li><a href="#"><i data-feather="log-in"> </i><span>Log in</span></a></li>
+                        <li><a @click="logout()" href="#"><i data-feather="log-in"> </i><span>Log out</span></a></li>
                     </ul>
                 </li>
             </ul>
@@ -230,6 +179,18 @@
 <script>
 export default {
 
+    data(){
+        return {
+            user: user, 
+        }
+    },
+    methods: {
+        logout() {
+            window.location.href = window.location.origin + "/logout";
+        },
+    },
+    mounted(){
+    }
 }
 </script>
 <style lang="">
